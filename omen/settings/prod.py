@@ -1,16 +1,12 @@
 """Production settings (Railway + Postgres + S3)."""
 
 from .base import *  # noqa: F401,F403
-from .base import env, env_bool, env_list
+from .base import RAILWAY_HOSTS, env_bool, env_list
 
 DEBUG = env_bool("DEBUG", False)
-# Allow any *.railway.app host (covers the public domain + the
-# "healthcheck.railway.app" probe) plus Railway's injected public domain and any
-# explicitly configured hosts. A leading dot matches all subdomains.
-ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", "") + [".railway.app"]
-_railway_domain = env("RAILWAY_PUBLIC_DOMAIN")
-if _railway_domain:
-    ALLOWED_HOSTS.append(_railway_domain)
+# Configured hosts + Railway hosts (".railway.app" covers the public domain and
+# the "healthcheck.railway.app" probe; RAILWAY_PUBLIC_DOMAIN is appended in base).
+ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", "") + RAILWAY_HOSTS
 
 # Behind Railway's proxy (TLS terminated upstream).
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")

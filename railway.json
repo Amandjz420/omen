@@ -5,7 +5,7 @@
   },
   "deploy": {
     "startCommand": "gunicorn omen.wsgi --bind 0.0.0.0:$PORT --workers 3 --timeout 120",
-    "preDeployCommand": "python manage.py release",
+    "preDeployCommand": "DJANGO_SETTINGS_MODULE=omen.settings.prod python manage.py release",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 5,
     "healthcheckPath": "/healthz"

@@ -47,7 +47,16 @@ def env_list(key: str, default: str = "") -> list[str]:
 # ---------------------------------------------------------------------------
 SECRET_KEY = env("SECRET_KEY", "django-insecure-change-me-in-production")
 DEBUG = env_bool("DEBUG", False)
-ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", "localhost,127.0.0.1")
+
+# Railway hosts: the public domain + the "healthcheck.railway.app" probe. A
+# leading dot matches all subdomains, so ".railway.app" covers both. Always safe
+# to allow and included in every environment (dev + prod) so a service started
+# with any settings module never 400s a Railway probe.
+RAILWAY_HOSTS = [".railway.app"]
+if env("RAILWAY_PUBLIC_DOMAIN"):
+    RAILWAY_HOSTS.append(env("RAILWAY_PUBLIC_DOMAIN"))
+
+ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", "localhost,127.0.0.1") + RAILWAY_HOSTS
 
 AUTH_USER_MODEL = "accounts.User"
 
