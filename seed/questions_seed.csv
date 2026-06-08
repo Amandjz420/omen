@@ -1,0 +1,905 @@
+service_type,service_sub_type,bank_scope,detail_category,answer_type,sequence,question_text
+Valuation of asset,Land,,Part A - GENERAL,Text,13,Landmark of the property with Location map
+Valuation of asset,Land,,Part A - GENERAL,Text,17,In case it is an agricultural land any conversion to house site plots is contemplated/thought
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Checkbox,2,Land use of property - as per ownership document
+Valuation of asset,Land,,Part A - GENERAL,Radio,19,Type (land use) of property - actual at site
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Checkbox,3,Land use of property - as per latest document of Government approving agency
+Valuation of asset,Land,,Part A - GENERAL,Text,21,Property/Asset best suited for - as per ownership document
+Valuation of asset,Land,,Part A - GENERAL,Text,22,Property/Asset best suited for - as per approval/permission
+Valuation of asset,Land,,Part A - GENERAL,Text,23,Property/Asset best suited for - actual at site
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Checkbox,4,Land use of property - as per Search Report or TIR document
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Tabular,5,Boundaries of the property offered - as per document
+Valuation of asset,Land,,Part A - GENERAL,Tabular,27,Boundaries of the property - actual at site
+Valuation of asset,Land,,Part A - GENERAL,Text,28,Deviation in boundaries if any
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Tabular,6,Dimensions of the site(offered) - as per document
+Valuation of asset,Land,,Part A - GENERAL,Tabular,30,Dimensions of the site - actual at site
+Valuation of asset,Land,,Part A - GENERAL,Text,31,Deviation in dimensions if any
+Valuation of asset,Land,,Part A - GENERAL,Text,32,Cordinates (Latitude/Longitude) of site
+Valuation of asset,Land,,Part A - GENERAL,Text,33,Extend of site
+Valuation of asset,Land,,Part A - GENERAL,Text,34,Extend of site considered for valuation
+Valuation of asset,Land,,Part A - GENERAL,Radio,35,Whether occupied by the Owner/Tenant
+Valuation of asset,Land,,Part A - GENERAL,Tabular,36,Occupied details (if by tenant)
+Valuation of asset,Land,,Part B - CHARACTERISTIC OF THE SITE,Checkbox,2,Development of surrounding area done by
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Checkbox,1,Level/contour of Land with topographical conditions
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Text,2,Distance from Sea Coast / river / Nala / Lake
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Checkbox,3,Shape & soil type of land
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Text,4,Type of use to which it can be put
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Radio,8,Road facilities
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Radio,9,Type of road available at present
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Radio,10,Means of surface commutation to reach site
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Radio,11,Width of road
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Checkbox,13,Water Potential
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Radio,14,Underground sewerage system
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Checkbox,15,Power supply availability at site
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Checkbox,16,Telecommunication availability
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Checkbox,17,Advantage of the site
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Text,18,Disadvantages of the site
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Text,18,Prevailing market rate
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Text,21,Government valuation of land
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Text,22,Assessed/adopted rate of land valuation
+Valuation of asset,Land,,Part B - CHARACTERISTIC OF THE SITE,Text,6,Assessed / Estimated Value of Land
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Radio,23,Corner plot or intermittent plot?
+Valuation of asset,Land,,Part B - CHARACTERISTIC OF THE SITE,Text,7,Special remarks
+Valuation of asset,L & B,,Part M - GUIDE LINE VALUE OF PROPERTY,Sum of Attribute,1,Guide Line Value
+Valuation of asset,Land,,Part J - SERVICES,Sum of Attribute,1,Services
+Valuation of asset,Land,,Part L - TOTAL ABSTRACT,Sum of Attribute,1,Total Abstract of the Entire Property
+Valuation of asset,Land,,Part M - GUIDE LINE VALUE OF PROPERTY,Text,1,Collector Guide Line Value
+Valuation of asset,Land,,Part N - VALUER COMMENT,Text,2,Was property valued earlier
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Text,25,Total extent of the plot
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Tabular,24,Size of plot
+Valuation of asset,Land,,Part C - VALUATION OF LAND,Text,26,Estimated value of land
+Valuation of asset,L & B,,OTHER MARKET VALUES,Tabular,1,Other Market values
+Valuation of asset,Land,,OTHER MARKET VALUES,Tabular,1,Other Market Values
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,1,Purpose of this report to bank
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,2,Task of Valuer - to determine
+Valuation of asset,L & B,,PART A - BANK / PARTY,Tabular,3,Name of the owner(s)
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,4,List of documents produced
+Valuation of asset,L & B,,PART A - BANK / PARTY,Text,8,Shortcoming observed in documents
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,1,Date of Inspection
+Valuation of asset,L & B,,PART D - POST SITE,Text,1,Date of making this report
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,2,Brief description of property (at site)
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,14,Type of ownership
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,15,In-case of Lease property - Details of the Lesser
+Valuation of asset,L & B,,PART A - BANK / PARTY,Text,16,In-case of leased property - Balance lease period
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,17,In-case of leased property - Details as per lease agreement
+Valuation of asset,L & B,,PART C - ONSITE,Text,3,Postal address of property
+Valuation of asset,L & B,,PART C - ONSITE,Text,4,If any landmark
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,5,Development of surrounding area (actual at site)
+Valuation of asset,L & B,,PART C - ONSITE,Radio,6,Coming under limits of -
+Valuation of asset,L & B,,PART C - ONSITE,Radio,7,Whether Covered under any state/ Center Government enactments
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,8,In case it is an agricultural land any conversion to house site plots is contemplated
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Checkbox,18,Land use of property - as per ownership document
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,9,Type (land used) of property - Actual at site
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Checkbox,19,Land use of property - as per latest document
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Tabular,6,Boundaries of the property (as per document)
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,10,Boundaries of the property (actual at site)
+Valuation of asset,L & B,,PART D - POST SITE,Text,2,Any worryful deviation in Boundaries
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Tabular,7,Dimensions of the site (as per document)
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,11,Dimensions of the site (actual at site)
+Valuation of asset,L & B,,PART D - POST SITE,Text,3,Any worryful deviation in Dimensions of the site
+Valuation of asset,L & B,,PART C - ONSITE,Text,12,Latitude / Longitude / Cordinates of site
+Valuation of asset,L & B,,PART D - POST SITE,Text,4,Extent of the site (land area as per document)
+Valuation of asset,L & B,,PART D - POST SITE,Text,5,Extent of site considered for valuation
+Valuation of asset,L & B,,PART C - ONSITE,Radio,13,Whether occupied by the owner / tenant
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,15,Classification of Area
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,16,Development of surrounding area done by
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,17,Possibility of frequent flooding/ submerging
+Valuation of asset,L & B,,PART C - ONSITE,Radio,18,Distance of civic amenities
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,19,Level / contour of Land
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,20,Shape & soil type of land
+Valuation of asset,L & B,,PART C - ONSITE,Text,21,Type of use to which it can be put
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Checkbox,8,Any usage restriction
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Radio,9,Is plot in Town Planning
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,10,Approval & permission layout
+Valuation of asset,L & B,,PART C - ONSITE,Radio,22,Corner plot or Intermittent plot
+Valuation of asset,L & B,,PART C - ONSITE,Radio,23,Road facilities
+Valuation of asset,L & B,,PART C - ONSITE,Radio,24,Type of road available at present
+Valuation of asset,L & B,,PART C - ONSITE,Radio,25,Width of road
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Radio,11,Is it a land locked land
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,26,Water Potential
+Valuation of asset,L & B,,PART C - ONSITE,Radio,27,Underground sewerage system
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,28,Is power supply available at site
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,29,Telecommunication Network availability
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,30,Advantage of the site
+Valuation of asset,L & B,,PART C - ONSITE,Text,31,Disadvantage of the site
+Valuation of asset,L & B,,PART C - ONSITE,Radio,32,Special remark if any like threat of acquisition
+Valuation of asset,L & B,,PART C - ONSITE,Text,33,Prevailing market rate
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,12,Guideline rate (land)
+Valuation of asset,L & B,,PART D - POST SITE,Text,6,Assessed / adopted rate of land
+Valuation of asset,L & B,,PART D - POST SITE,Text,7,Assessed / Estimated Value of Land
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,35,Type of Building
+Valuation of asset,L & B,,PART C - ONSITE,Radio,36,Type of construction & Quality
+Valuation of asset,L & B,,PART C - ONSITE,Text,37,Year of First construction
+Valuation of asset,L & B,,PART C - ONSITE,Text,38,Number of floors & height
+Valuation of asset,L & B,,PART C - ONSITE,Text,39,Plinth Area of the Building (Total)
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,40,Plinth constructed area floor wise
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,41,Appearance & Condition of Building (Exterior)
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,42,Appearance & Condition of the building (Interior)
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Tabular,13,Details of Approval/ Permission
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,43,Is building constructed strictly according to the sanctioned plan
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,44,Specification of construction (Floor wise)
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,45,Compound wall
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,46,Electrical Installation
+Valuation of asset,L & B,,PART C - ONSITE,Radio,47,Plumbing Installation
+Valuation of asset,L & B,,PART C - ONSITE,Formula Based Calculation,48,Details of Valuation (Independent Building)
+Valuation of asset,L & B,,PART C - ONSITE,Sum of Attribute,49,Part C- (Extra Items)
+Valuation of asset,L & B,,PART C - ONSITE,Sum of Attribute,50,Part D (Amenities)
+Valuation of asset,L & B,,PART C - ONSITE,Sum of Attribute,51,Part E- (Miscellaneous)
+Valuation of asset,L & B,,PART C - ONSITE,Sum of Attribute,52,Part F- (Services)
+Valuation of asset,L & B,,PART D - POST SITE,Sum of Attribute,9,Total Abstract of the Entire Property
+Valuation of asset,L & B,,PART D - POST SITE,Sum of Attribute,10,Guideline Value
+Valuation of asset,L & B,,PART D - POST SITE,Tabular,12,Valuer comment if any
+Valuation of asset,L & B,,PART D - POST SITE,Tabular,11,Other market values
+Valuation of asset,L & B,,PART C - ONSITE,Text,53,Total extent of the plot
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Radio,15,Whether genuineness of approved map / plan is verified
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,16,Any other comments by our empanelled valuers
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,54,If occupied by both
+Valuation of asset,L & B,,PART D - POST SITE,Text,14,F.S.I / F.A.R
+Valuation of asset,L & B,,PART D - POST SITE,Text,15,Plot / Ground Coverage
+Valuation of asset,L & B,,PART D - POST SITE,Checkbox,16,Any factors which affect the marketability of the land
+Valuation of asset,L & B,,PART C - ONSITE,Radio,55,Type of Land
+Valuation of asset,L & B,,PART C - ONSITE,Radio,55,Accessibility towards land
+Valuation of asset,Land,,PART A - BANK / PARTY,Checkbox,1,Purpose of this report to bank
+Valuation of asset,Land,,PART A - BANK / PARTY,Tabular,3,Name of the owner
+Valuation of asset,Land,,PART A - BANK / PARTY,Checkbox,4,List of documents produced for perusal
+Valuation of asset,Land,,PART A - BANK / PARTY,Checkbox,5,Document provided for perusal (Approval & Permissions)
+Valuation of asset,Land,,PART A - BANK / PARTY,Checkbox,6,Document provided for perusal (Statutory)
+Valuation of asset,Land,,PART A - BANK / PARTY,Checkbox,9,Type of ownership
+Valuation of asset,Land,,PART A - BANK / PARTY,Checkbox,10,In-case of leased property - Details of Lesser
+Valuation of asset,Land,,PART A - BANK / PARTY,Text,11,In-case of leased property - Balance lease period
+Valuation of asset,Land,,PART A - BANK / PARTY,Radio,12,In-case of leased property - Mortgageable rights
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Text,7,Population of Town
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Checkbox,8,Any usage restriction
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Radio,9,Is plot in town and planning
+Valuation of asset,Land,,PART C - ONSITE,Tabular,1,Date of inspection
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,2,Brief description of property (at site)
+Valuation of asset,Land,,PART C - ONSITE,Text,3,Postal address of property (current address)
+Valuation of asset,Land,,PART C - ONSITE,Text,4,Town / City
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,8,Development of surrounding area (actual at site)
+Valuation of asset,Land,,PART C - ONSITE,Radio,8,Coming under limits of -
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,7,Whether Covered under any state/ Center Government
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Text,10,Approval & permission layout (date and approval number)
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Radio,11,Is it a land locked
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Text,12,Guideline rate (Effective land rate)
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Tabular,13,Detail of approval/permission
+Valuation of asset,Land,,PART B - PRE-SITE VISIT,Radio,14,Any other comments by our empanelled valuers
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,8,In case it is an agricultural land
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,9,Type (land used) of property - Actual at site
+Valuation of asset,Land,,PART C - ONSITE,Tabular,10,Boundaries of the property offered (actual at site)
+Valuation of asset,Land,,PART C - ONSITE,Tabular,11,Dimensions of the site (offered) (actual at site)
+Valuation of asset,Land,,PART C - ONSITE,Text,12,Latitude/longitude/Cordinates of site
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,13,Classification of the area
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,14,Possibility of frequent -Flooding
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,15,Development of surrounding area done by -
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,16,Distance of civic amenities
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,17,Level/contour of Land with topographical conditions
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,18,Shape & soil type of land
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,19,Type of use to which it can be put
+Valuation of asset,Land,,PART C - ONSITE,Radio,20,Corner plot or Intermittent plot
+Valuation of asset,Land,,PART C - ONSITE,Radio,21,Road facilities
+Valuation of asset,Land,,PART C - ONSITE,Radio,22,Type of road available at present
+Valuation of asset,Land,,PART C - ONSITE,Radio,23,Width of road
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,24,Water Potentiality
+Valuation of asset,Land,,PART C - ONSITE,Radio,25,Underground sewerage system
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,26,Is power supply available at site
+Valuation of asset,Land,,PART C - ONSITE,Radio,27,Industrial Area
+Valuation of asset,Land,,PART C - ONSITE,Checkbox,28,Advantage of the site
+Valuation of asset,Land,,PART C - ONSITE,Text,29,Disadvantage of the site
+Valuation of asset,Land,,PART C - ONSITE,Text,30,Special remark if any
+Valuation of asset,Land,,PART C - ONSITE,Text,31,Prevailing market rate
+Valuation of asset,Land,,PART C - ONSITE,Tabular,32,Size of plot
+Valuation of asset,Land,,PART C - ONSITE,Sum of Attribute,33,Part C - Extra Items
+Valuation of asset,Land,,PART C - ONSITE,Sum of Attribute,34,Part F - Services
+Valuation of asset,Land,,PART C - ONSITE,Text,35,Total extent of the plot
+Valuation of asset,Land,,PART C - ONSITE,Radio,36,Type of land
+Valuation of asset,Land,,PART C - ONSITE,Radio,37,Accessibility towards land
+Valuation of asset,Land,,PART D - POST SITE,Text,1,Date of making this report
+Valuation of asset,Land,,PART D - POST SITE,Text,2,Any worryful deviation in Boundaries/ Neighborhood
+Valuation of asset,Land,,PART D - POST SITE,Text,3,Any worryful deviation in Dimensions of the site
+Valuation of asset,Land,,PART D - POST SITE,Text,4,Extent of the site
+Valuation of asset,Land,,PART D - POST SITE,Text,5,Extent of site considered for valuation
+Valuation of asset,Land,,PART D - POST SITE,Text,6,Assessed/adopted rate of land
+Valuation of asset,Automobile,,PART A - BANK / PARTY,Text,1,Client & Branch Name
+Valuation of asset,Automobile,,PART A - BANK / PARTY,Radio,2,Purpose of report to bank
+Valuation of asset,Automobile,,PART A - BANK / PARTY,Checkbox,3,Task of Valuer
+Valuation of asset,Automobile,,PART A - BANK / PARTY,Checkbox,4,Documents produced for perusal
+Valuation of asset,Automobile,,PART A - BANK / PARTY,Text,5,Name of latest owner
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Radio,1,Loan Details/Division
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Radio,2,Ownership S. No.
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Radio,3,Vehicle category
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Radio,4,Asset Type
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Tabular,5,Identification of Vehicle (As per RTO)
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Text,6,Manufacturer/ Model No.
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Text,11,No. of Axle
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Text,12,Year of Manufacture
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Checkbox,13,Fuel Used
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Radio,14,Operating Use/ Type
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Text,15,No. of Cylinder
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Text,16,Cubic Capacity
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Text,17,Unladen Weight
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Text,18,Wheel Base
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Radio,19,Type (BIS)
+Valuation of asset,Automobile,,PART B - PRE-SITE VISIT,Tabular,16,Insurance Details of Vehicle
+Valuation of asset,Automobile,,PART C - ONSITE,Tabular,1,Inspection Details
+Valuation of asset,Automobile,,PART C - ONSITE,Radio,2,Possession Holder
+Valuation of asset,Automobile,,PART C - ONSITE,Text,3,Accessories (other than original fitment)
+Valuation of asset,Automobile,,PART C - ONSITE,Tabular,4,Internal Maintenance
+Valuation of asset,Automobile,,PART C - ONSITE,Tabular,5,Battery Details
+Valuation of asset,Automobile,,PART C - ONSITE,Tabular,6,Age
+Valuation of asset,Automobile,,PART C - ONSITE,Radio,7,External Maintenance
+Valuation of asset,Automobile,,PART C - ONSITE,Text,8,Repair requirement
+Valuation of asset,Automobile,,PART C - ONSITE,Radio,9,Denting Requirement
+Valuation of asset,Automobile,,PART C - ONSITE,Radio,10,Painting Requirement
+Valuation of asset,Automobile,,PART C - ONSITE,Tabular,11,Tyre Condition (Worn - out)
+Valuation of asset,Automobile,,PART C - ONSITE,Tabular,12,Light (Front Right)
+Valuation of asset,Automobile,,PART C - ONSITE,Tabular,13,Light (Front Left)
+Valuation of asset,Automobile,,PART C - ONSITE,Tabular,14,Light (Rear Right)
+Valuation of asset,Automobile,,PART C - ONSITE,Tabular,15,Light (Rear Left)
+Valuation of asset,Automobile,,PART C - ONSITE,Text,16,Glasses (Nos.- Broken)
+Valuation of asset,Automobile,,PART C - ONSITE,Radio,17,Operator driver
+Valuation of asset,Automobile,,PART C - ONSITE,Radio,18,Servicing Status
+Valuation of asset,Automobile,,PART C - ONSITE,Tabular,20,Identification of Vehicle (As per Inspection)
+Valuation of asset,Automobile,,PART C - ONSITE,Checkbox,21,Seat
+Valuation of asset,Automobile,,PART D - POST SITE,Radio,1,Availability of Repair/ Workshop
+Valuation of asset,Automobile,,PART D - POST SITE,Radio,2,Availability of Model
+Valuation of asset,Automobile,,PART D - POST SITE,Radio,3,Manufacturer Status
+Valuation of asset,Automobile,,PART D - POST SITE,Tabular,4,Road Tax
+Valuation of asset,Automobile,,PART D - POST SITE,Text,5,Name of Hypothecation
+Valuation of asset,Automobile,,PART D - POST SITE,Text,6,Any changes in Hypothecation
+Valuation of asset,Automobile,,PART D - POST SITE,Radio,7,Permit
+Valuation of asset,Automobile,,PART D - POST SITE,Tabular,8,Present Price of New Vehicle & Accessories
+Valuation of asset,Automobile,,PART D - POST SITE,Tabular,9,Price of Vehicle & Accessories at the time of purchase
+Valuation of asset,Automobile,,PART D - POST SITE,Tabular,10,Bills/ Invoice Details
+Valuation of asset,Automobile,,PART D - POST SITE,Tabular,11,Valuer Comment's
+Valuation of asset,Automobile,,PART D - POST SITE,Tabular,12,Other Market Value
+Valuation of asset,Automobile,,PART D - POST SITE,Radio,13,"Upload Work Order or Pay-in Receipt, only if fully paid"
+Valuation of asset,Flat & Shop,,PART A - BANK / PARTY,Checkbox,1,Purpose for which the valuation is made
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,1,Date of inspection
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Text,1,Date on which the valuation is made
+Valuation of asset,Flat & Shop,,PART A - BANK / PARTY,Checkbox,2,List of documents produced for perusal (Ownership documents)
+Valuation of asset,Flat & Shop,,PART A - BANK / PARTY,Checkbox,3,Document provided for perusal (Approval & Permissions)
+Valuation of asset,Flat & Shop,,PART A - BANK / PARTY,Checkbox,4,Document provided for perusal (Statutory)
+Valuation of asset,Flat & Shop,,PART A - BANK / PARTY,Text,5,Name of the owner(s) and his / their address (es) with Phone no.
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Checkbox,2,Brief description of the property
+Valuation of asset,Flat & Shop,,PART B - PRE-SITE VISIT,Tabular,1,Location of property
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,3,Postal address of the property
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Checkbox,4,Classification of the area
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,5,Coming under Corporation limit / Village Panchayat / Municipality
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Checkbox,6,Whether Covered under any state/ Center Government enactments
+Valuation of asset,Flat & Shop,,PART B - PRE-SITE VISIT,Tabular,2,Boundaries of the property - as per deed
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Tabular,7,Boundaries of the property (actual at site)
+Valuation of asset,Flat & Shop,,PART B - PRE-SITE VISIT,Tabular,3,Dimensions of the site (as per document)
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Tabular,8,Dimensions of the site (actual at site)
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Text,8,Extent of the site
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,9,Latitude / Longitude / Coordinates of site
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Text,9,Extend of site considered for valuation
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Checkbox,10,Whether occupied by the owner/tenant
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Checkbox,11,Nature of the Apartment
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,12,Location of property
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Checkbox,13,Description of the locality
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,14,Year of Construction
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,15,Number of floors (at site)
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Checkbox,16,Type of Structure
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,17,Number of flat (dwelling units) in the building
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,18,Quality of Construction
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,19,Appearance of the Building
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,20,Maintenance of the Building
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Checkbox,21,Facilities Available
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,22,The floor on which the flat is situated
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,23,Door / Flat No.
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Tabular,24,Specifications of the flat
+Valuation of asset,Flat & Shop,,PART B - PRE-SITE VISIT,Tabular,4,Property Tax Details
+Valuation of asset,Flat & Shop,,PART B - PRE-SITE VISIT,Tabular,5,Electricity Service Details
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,25,How is the maintenance of the flat?
+Valuation of asset,Flat & Shop,,PART B - PRE-SITE VISIT,Text,6,Sale Deed executed / to be executed in the name of
+Valuation of asset,Flat & Shop,,PART B - PRE-SITE VISIT,Text,7,What is the undivided area of land as per sale deed
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,26,What is the plinth area of the flat? (Super Built up Area)
+Valuation of asset,Flat & Shop,,PART B - PRE-SITE VISIT,Text,8,What is the floor space index (app.)
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,27,What is the Carpet Area of the flat?
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Checkbox,28,Is it Posh/ I Class/ Medium/ Ordinary
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,29,Is it being used for Residential/ Commercial purpose?
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Checkbox,30,Is it Owner-occupied or let out?
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,31,"If rented, what is the monthly rent?"
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,32,How is the marketability?
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,33,What are the factors favoring for an extra Potential Value?
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,34,Any negative factors are observed which affect the market value in general?
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,35,"After analyzing the comparable sale instances, what is the composite rate for a similar flat"
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,36,"Assuming it is a new construction, what is the adopted basic composite rate"
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Tabular,37,Break - up for the rate
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Text,4,Guideline rate obtained from the Registrar's office
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Tabular,5,Composite building rate A
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Tabular,6,Composite building rate B
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Sum of Attribute,7,Details of Valuation
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Text,8,Guideline Value
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Tabular,9,Valuer comment if any
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Tabular,10,Other market values
+Valuation of asset,Flat & Shop,,PART A - BANK / PARTY,Radio,6,Name & address of the Valuer
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,37,Name of Apartment
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Radio,37,Postal address of the property
+Valuation of asset,Flat & Shop,,PART C - ONSITE,Text,38,Flat no. and Floor
+Valuation of asset,Flat & Shop,,PART A - BANK / PARTY,Checkbox,7,Task of Valuer - to determine
+Valuation of asset,Flat & Shop,,PART A - BANK / PARTY,Checkbox,8,Document provided for perusal (Other)
+Valuation of asset,Flat & Shop,,PART B - PRE-SITE VISIT,Tabular,9,"Approval validity, issuing authority verification"
+Valuation of asset,Flat & Shop,,PART A - BANK / PARTY,Text,9,Shortcoming observed in documents
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Tabular,11,Other market values (FILL ONLY UBIN)
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Tabular,70,Was property valued earlier
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Radio,13,"Upload Work Order or Pay-in Receipt, only if fully paid"
+Valuation of asset,Flat & Shop,,PART D - POST SITE,Checkbox,14,Upload The Annexures
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,4,List of documents produced for perusal (Ownership documents)
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,15,(From 1) In-case of Lease property - Details of the Lesser
+Valuation of asset,L & B,,PART A - BANK / PARTY,Text,16,(From 1) In-case of leased property - Balance lease period
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,17,(From 1) In-case of leased property - Details as per lease agreement
+Valuation of asset,L & B,,PART C - ONSITE,Text,3,Postal address of property (current address)
+Valuation of asset,L & B,,PART C - ONSITE,Text,4,if any landmark
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Checkbox,19,Land use of property - as per latest document of Government approving agency
+Valuation of asset,L & B,,PART D - POST SITE,Text,2,Any worryful deviation in Boundaries/ Neighborhood of the property
+Valuation of asset,L & B,,PART C - ONSITE,Text,12,Latitude / Longitude / Coordinates of site
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,16,Development of surrounding area done by -
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,19,Level / contour of Land with topographical conditions
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,10,Approval & permission layout (date and approval number)
+Valuation of asset,L & B,,PART C - ONSITE,Radio,32,Special remark (Distance from sea-coast / tidal level)
+Valuation of asset,L & B,,PART C - ONSITE,Text,33,Prevailing market rate (sq.mtr. hectare)
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,12,Guideline rate (land) obtained from the collector/Registrar Office
+Valuation of asset,L & B,,PART D - POST SITE,Text,6,Assessed / adopted rate of land (Rs. per sq mt or hectare)
+Valuation of asset,L & B,,PART D - POST SITE,Text,7,Assessed / Estimated Value of Land (Rs. in lacs)
+Valuation of asset,L & B,,PART C - ONSITE,Radio,36,Type of construction & Quality of construction
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Radio,15,Whether genuineness or authenticity of approved map / plan is verified
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,16,Any other comments by our empanelled valuers on authentic of approved plan
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,1,Name of Valuer
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,2,Name of Bank / FI as applicable
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,3,Name of Developer of the Property
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,5,Area of the plot/land
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,15,Layout plan of the area in which the property is located
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,25,Survey no. if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,23,Any other aspect in head Physical Characteristics of the Asset
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,34,Planning area/zone
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,25,Development controls
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,26,Zoning regulations
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,19,FAR/FSI permitted and consumed
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,20,"Transferability of development rights if any, Building bye-law"
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,21,Comment on surrounding land uses
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,22,Comment on demolition proceedings if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,23,Comment on compounding/ regularization
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,24,Comment on unauthorized constructions if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,25,Comment on whether NOC has been issued or not
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,26,Any other aspect in head Town Planning Parameters
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,10,Ownership documents
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,27,Names of Owner/s
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,28,Comment on dispute/issues of landlord
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,59,Comment on whether the IP is independently accessible?
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,29,Title verification
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,30,Details of leases if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,31,Ordinary status of freehold or leasehold
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,32,Agreements of easements if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,60,Notification for acquisition if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,61,Notification for road widening if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,33,Heritage restrictions if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,34,Comment on transferability of the property ownership
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,35,Comment on existing mortgages/ charges/encumbrances
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,62,Comment on whether the owners have issued any guarantee
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,36,"Building plan sanction, illegal constructions"
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,37,Any other aspect in head Legal aspect
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,38,Details of ground rent payable
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,63,Details of monthly rents being received if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,39,Taxes and other outgoings
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,40,Property insurance
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,41,Monthly maintenance charges
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,42,"Security charges, etc"
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,43,Any other aspect in head Economic aspects
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,44,"Description of the location (social structure, etc.)"
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,45,Description of the functionality - Space allocation
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,46,Description of the functionality - Storage spaces
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,47,Description of the functionality - Utility of spaces
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,48,Description of the functionality - Any other aspect
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,64,Description of aqua infrastructure - Water supply
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,65,Description of aqua infrastructure - Sewerage
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,66,Description of aqua infrastructure - Storm water
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,67,Description of physical infrastructure - Solid waste
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,68,Description of physical infrastructure - Electricity
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,69,Description of physical infrastructure - Roads
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,69,Description of physical infrastructure - Other utilities
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,70,Social infrastructure in terms of In KM
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,51,Analysis of the market - Locational attributes
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,52,Analysis of the market - Scarcity
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,53,Analysis of the market - Demand and supply
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,70,Materials and technology used
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,71,Specifications
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,72,Maintenance issues
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,73,Age of the building
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,74,Total life of the building
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,75,Extent of deterioration
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,76,Structural safety
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,77,Protection against natural disasters
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,78,Visible damage in the building if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,79,Common facilities
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,80,System of air-conditioning
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,81,Provision for firefighting
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,54,Use of environment friendly building materials
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,82,Provision for rain water harvesting
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,83,Use of solar heating - Presence of environmental pollution
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,84,Descriptive account (modern/old/heritage/etc)
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,85,Proximity to residential areas
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,86,Availability of public transport facilities
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,55,A detailed analysis (valuation approach/data)
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,56,Procedure adopted for arriving at the valuation
+Valuation of asset,L & B,,PART A - BANK / PARTY,Text,9,If this report is to be used for any bank purpose
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,4,Date of inspection
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,5,Date of Valuation
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,6,Purpose of Valuation
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,7,Name of Property Owner/s
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,8,Whether occupied by the owner / tenant?
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,9,Location of the property in the city
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,10,Classification of the area
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,11,Coming under Corporation limit
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,12,Postal address of the property
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,13,"Latitude, Longitude and Coordinates of the site"
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,16,Development of surrounding areas
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,17,Details of Roads abutting the property
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,18,Whether Covered under any state / Center Government enactments
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,19,In case it is an agricultural land
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,20,Boundaries of the property as per document
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,21,Extent of the site considered for valuation
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,22,Description of Adjoining properties as per documents
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,23,Description of Adjoining properties as actual at site
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,24,Boundaries of the property actual at site
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,26,Type of Building
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,27,Details of the building/buildings specifications
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,28,"Plinth area, Carpet area and Saleable area"
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,29,Master plan provisions
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,30,Date of issue and validity of layout
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,31,Whether genuineness or authenticity of approved map / plan is verified
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,32,Any other comments on authentic of approved plan
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,37,Ground coverage
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,55,Possibility of frequent flooding / sub-merging
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,56,Special remark (acquisition/road widening/CRZ)
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,87,Type of construction
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,108,Total Area of plot / land
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,109,Guideline rate (land) obtained from the collector/Registrar Office
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,109,Prevailing market rate in sq mt / hectare
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,110,Assessed/adopted rate
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,111,Estimated Value of Land
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Formula Based Calculation,112,Details of Valuation (Independent Building)
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Sum of Attribute,113,Extra Items if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Sum of Attribute,114,Amenities if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Sum of Attribute,116,Miscellaneous if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Sum of Attribute,117,Services if any
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Sum of Attribute,118,Total Abstract of the Entire Property
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Sum of Attribute,120,Guideline Value
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,121,Was property valued earlier
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,122,Valuer's Comment
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,123,Date of purchase of immovable property
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,124,Purchase Price of immovable property
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,125,Book value of immovable property
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,126,Realizable Value of immovable property
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,127,Distress Sale Value of immovable property
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,127,"Guideline Value (value as per Circle Rates), if applicable"
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,128,Fair Market Value of immovable property
+Valuation of asset,L & B,,PART C - ONSITE,Radio,57,Prevailing market rate (Along with details/reference)
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,129,Details / reference of atleast two latest deals
+Valuation of asset,L & B,,PART C - ONSITE,Radio,58,Number of light / Fan / Spare plug points
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,5,Document provided for perusal (Approval & Permissions)
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,6,Document provided for perusal (Statutory)
+Valuation of asset,L & B,,PART A - BANK / PARTY,Checkbox,7,Document provided for perusal (Other)
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Checkbox,17,Land use of property - as per Search Report or TIR document
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,58,Classification of locality
+Valuation of asset,L & B,,PART D - POST SITE,Radio,17,Valuation Details (Mandatory) FOR CNRB ONLY
+Valuation of asset,L & B,,PART D - POST SITE,Tabular,19,Other market values (FILL ONLY UBIN)
+Valuation of asset,L & B,,PART D - POST SITE,Tabular,70,Was property valued earlier
+Valuation of asset,L & B,,PART D - POST SITE,Radio,21,"Upload Work Order or Pay-in Receipt, only if fully paid"
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Radio,130,"Upload Work Order or Pay-in Receipt, only if fully paid"
+Valuation of asset,L & B,,PART C - ONSITE,Text,60,City / Town
+Valuation of asset,L & B,,PART C - ONSITE,Radio,61,Residential Area
+Valuation of asset,L & B,,PART C - ONSITE,Radio,62,Commercial Area
+Valuation of asset,L & B,,PART C - ONSITE,Radio,63,Industrial Area
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Radio,1,Location of the property
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,2,Plot no. / Nagar / Survey No.
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,3,Door no. / House no
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,4,S.F. No. / T. S. No. / R.S. No.
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,5,Village / Block Taluk / Ward Mandal / District
+Valuation of asset,L & B,,PART A - BANK / PARTY,Text,11,Property tax receipt referred (Period)
+Valuation of asset,L & B,,PART A - BANK / PARTY,Text,11,Assessment number
+Valuation of asset,L & B,,PART A - BANK / PARTY,Text,12,Tax Amount (Rs.)
+Valuation of asset,L & B,,PART A - BANK / PARTY,Text,13,Receipt in the name of
+Valuation of asset,L & B,,PART C - ONSITE,Text,62,Electricity service connection consumer number
+Valuation of asset,L & B,,PART C - ONSITE,Text,64,Electricity connection In the name of
+Valuation of asset,L & B,,PART C - ONSITE,Text,65,"Electricity connection others details, if any"
+Valuation of asset,L & B,,PART C - ONSITE,Radio,66,Property is presently occupied by
+Valuation of asset,L & B,,PART C - ONSITE,Text,67,"If tenanted fully, What is the gross monthly rent (Rs.)"
+Valuation of asset,L & B,,PART C - ONSITE,Text,68,If occupied by both
+Valuation of asset,L & B,,PART C - ONSITE,Text,69,By assuming the entire building is let out
+Valuation of asset,L & B,,PART C - ONSITE,Text,70,(i) What is the probable monthly rent?
+Valuation of asset,L & B,,PART C - ONSITE,Text,71,(ii) What is the advance amount?
+Valuation of asset,L & B,,PART C - ONSITE,Text,72,Size of plot
+Valuation of asset,L & B,,PART C - ONSITE,Text,73,Dimension of plot North & South
+Valuation of asset,L & B,,PART C - ONSITE,Text,74,Dimension of plot East & West
+Valuation of asset,L & B,,PART C - ONSITE,Text,75,Total area of plot / land
+Valuation of asset,L & B,,PART C - ONSITE,Radio,76,Characteristics of the site
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,77,What is the classification of the locality area
+Valuation of asset,L & B,,PART D - POST SITE,Radio,22,Value on adopting GLR (Guideline Rate)
+Valuation of asset,L & B,,PART D - POST SITE,Text,23,i) Guideline rate as obtained from the Registrar's Office
+Valuation of asset,L & B,,PART D - POST SITE,Text,24,ii) Value of land by adopting GLR (Area X Rate) = Value
+Valuation of asset,L & B,,PART C - ONSITE,Text,77,Whether occupied by the owner / tenant? If occupied by tenant
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,1,Summary Valuation Report on properties owned by Shri / Smt.
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,2,Sr No. Particular
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,3,Name of the Branch
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,4,Name of the borrower
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,5,Name of the Valuer / Firm
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,6,Date of visit by Valuer
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,7,Name of the Bank Official accompanied / visited with Valuer
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,8,Description of Property / properties
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,9,Name of the owner / Mortgagor
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,10,Extent of area (in acres/hectors/sq meter / sq feet)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,11,Survey no/ Gut no./ CST no. / House no
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,12,Type of Land
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,13,Nature of Property
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,14,In possession of / Occupancy
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,15,Location
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,16,Boundaries
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,17,Market Value of the Property
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,18,Realizable Value of the Property
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,19,Distress Value of the Property
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,20,Value of the Property as per the Govt. Ready Reckoner
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,21,Certified that the property is properly demarcated / un demarcated
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,22,Purpose for which the valuation is made
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,23,Date of inspection
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,24,Date on which the valuation is made
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,25,List of documents produced for perusal (Ownership documents)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,26,Document provided for perusal (Approval & Permissions)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,27,Document provided for perusal (Statutory)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,28,Document provided for perusal (Other)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,29,Name of the owner(s) and his / their address (es) with Phone no.
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,30,Brief description of the property (Including leasehold / freehold etc)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,31,Location of property
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,32,Plot no. / Survey No.
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,33,Door No.
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,34,T. S. No / Village
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,35,Ward / Taluka
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,36,Mandal / District
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,37,Postal address of the property
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,38,City / Town
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,39,Residential Area
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,40,Commercial Area
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,41,Industrial Area
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,42,Classification of Area
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,43,High / Middle / Poor
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,44,Urban / Semi Urban / Rural
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,45,Coming under
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,46,Whether Covered under any state/ Center Government enactments
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,47,In case it is an agricultural land any conversion to house site plots is contemplated
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,48,Boundaries of the property as per document
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,49,North
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,50,South
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,51,East
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,52,West
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,53,Boundaries of the property Actual at site
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,54,North
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,55,South
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,56,East
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,57,West
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,58,Dimensions of the site (As per the Deed)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,59,North
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,60,South
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,61,East
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,62,West
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,63,Dimensions of the site (As per the actual at site)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,64,North
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,65,South
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,66,East
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,67,West
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,68,"Latitude, Longitude and Coordinates of the site"
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,69,Extent of the site
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,70,Extent of the site considered for valuation
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,71,Whether occupied by the owner / tenant?
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,72,Classification of locality
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,73,Development of surrounding areas
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,74,Possibility of frequent flooding / sub - merging.
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,75,Feasibility to the civic amenities
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,76,Level of land with topographical conditions
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,77,Shape of land
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,78,Type of use to which it can be put
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,79,Any usage restriction
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,80,Is plot in Town Planning
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,81,Corner plot or Intermittent plot
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,82,Road facilities
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,83,Type of road available at present
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,84,Width of the road - is it below 20 ft. or more then 20 ft.
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,85,Is it a land - locked land ?
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,86,Water potentiality.
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,87,Underground sewerage system
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,88,Is power supply available at the site ?
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,89,Advantage of the site .
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,90,Special remark if any
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,91,Size of plot
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,92,North & South
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,93,East & West
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,94,Total extent of the plot
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,95,Prevailing market rate
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,96,Guideline rate
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,97,Assessed / adopted rate of land
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,98,Assessed / Estimated Value of Land
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,99,Technical details of the building
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Checkbox,100,Type of Building
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,101,Type of construction
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,102,Year of construction
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,103,Number of floors & height of each floor
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,104,Plinth area floor - wise
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,105,Condition of the building
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,106,Condition of the building Exterior
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,107,Condition of the building Interior
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,108,Date of issue and validity of layout of approved map / plan
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,109,Approved map / plan issuing authority
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,110,Whether genuineness or authenticity of approved map / plan is verified
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,111,Any other comments by our empanelled valuers on authentic of approved plan
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,112,Specifications of construction (floor - wise) in respect of
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,113,Description
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,114,Foundation
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,115,Basement
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,116,Superstructure
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,117,RCC works
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,118,Plastering
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,119,"Flooring, Skirting, dadoing"
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,120,Special finish
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,121,Joinery / Doors & Windows
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,122,Roofing including weather proof course
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,123,Drainage
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,124,Description
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,125,Compound wall
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,126,Height of compound wall
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,127,Length of compound wall
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,128,Type of construction of compound wall
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,129,Electrical installation
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,130,Type of wiring
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,131,Class of fittings
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,132,Number of light points
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,133,Fan points
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,134,Spare plug points
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,135,Any other item (Electrical)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,136,Plumbing installation
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,137,No. of water closets and their type
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,138,No. of wash basins
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Radio,139,No. urinals
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,140,No. of bath tubs
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,141,"Water meter, taps, etc."
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,142,Any other fixtures (Plumbing)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Tabular,143,Details of valuation
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Sum of Attribute,144,Part C- (Extra Items)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Sum of Attribute,145,Part D (Amenities)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Sum of Attribute,146,Part e - (Miscellaneous)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Sum of Attribute,147,Part F - (Services)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Sum of Attribute,148,Total abstract of the entire property
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Sum of Attribute,149,Guide Line Value
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Tabular,150,Valuer comment if any
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Tabular,151,Was property valued earlier
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Tabular,152,Other Market values
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,1,Purpose of valuation
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,2,a. Date of Inspection
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,3,Date on which the valuation is made
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,4,Name of the reported owner with present address and phone number
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,5,Documents produced for perusal
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,6,Brief description of the property taken for valuation
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,7,Scope of Valuation
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,8,"In case it is an agricultural land, any conversion contemplated"
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,9,Postal address of the property with Pin code
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,10,City / Town
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,11,Residential Area
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,12,Commercial Area
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,13,Industrial Area
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,14,Classification of area
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,15,Coming under corporation limit / Village Panchayat
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,16,Whether Covered under Govt. enactments
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,17,"In case it is an agricultural land, any conversion contemplated"
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,18,Location of the property (Documentary)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,19,A Boundaries of the property as per deed
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,20,North
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,21,South
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,22,East
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,23,West
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,24,B Boundaries of the property as per visit / Actuals
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,25,North
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,26,South
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,27,East
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,28,West
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,29,"Latitude, Longitude and coordinates"
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,30,Property tax receipt referred
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,31,Assessment number
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,32,Tax amount
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,33,Receipt in the name of
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,34,Electricity service connection consumer number
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,35,In the name of
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,36,"Other details, if any"
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,37,Property is presently occupied by
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,38,If tenanted fully
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,39,What is the gross monthly rent?
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,40,If occupied by both
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,41,By assuming the entire building is let out
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,42,(i) What is the probable monthly rent?
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,43,(ii) What is the advance amount?
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,44,Valuation Details
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,45,F.S.I
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,46,Plot Coverage
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,47,A Dimension of the site As per title deed
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,48,North
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,49,South
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,50,East
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,51,West
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,52,Extent
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,53,B Dimension of the site (Actuals)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,54,North
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,55,South
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,56,East
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,57,West
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,58,Extent
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,59,Extent of site (least of 1a & 1b) (Plot Area)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,60,Size of the Plot
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,61,North & South
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,62,East & West
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,63,Total area considered extent of the plot
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,64,Characteristics of the site
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,65,What is the character of the locality?
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,66,What is the classification of the locality?
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,67,Development of surrounding areas
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,68,Possibility of frequent flooding / sub merging
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,69,Feasibility / Nearness to civic amenities
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,70,Level of land with topographical conditions
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,71,Shape of land
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,72,Type of use to which it can be put
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,73,Any usage restriction
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,74,Is plot in town planning approved layout?
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,75,Corner plot or intermittent plot?
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,76,Type of road available at present
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,77,Road facilities are available?
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,78,Is it a land locked land
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,79,Water Potentiality
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,80,Width of the road
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,81,Underground sewerage system
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,82,Is power supply available at the site ?
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,83,Advantage of the site
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,84,Special remark if any like threat of acquisition
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,85,Any factors which affect the marketability of the land
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,86,Type of Land
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,87,Accessibility
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,88,Value on adopting GLR (Guideline Rate)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,89,i) Guideline rate as obtained from the Registrar's Office
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,90,ii) Value of land by adopting GLR
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,91,Value by adopting PMR (Prevailing Market Rate)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,92,Prevailing market rate (Along with details)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,93,Unit rate adopted in this valuation
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,94,Type of Building
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,95,type of construction
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,96,Quality of construction
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,97,Appearance of Building
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,98,Maintenance / Condition of the building
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,99,Maintenance / Condition of the building
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,100,Plinth Area
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,101,Number of floors and height of each floor
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,102,Floor Wise Details
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,103,a. Date of issue and validity of layout
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,104,b. Approved map / plan issuing authority
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,105,c. Whether genuineness or authentic of approved map
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,106,d. Any other comments by our empanelled valuers
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,107,"e. Discuss on the building approval, reference"
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,108,Value of building is estimated
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,109,Description (please do not fill the answer)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,110,Specification
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,111,Floor finish (floor wise)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,112,Superstructure (floor wise)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,113,Roof (floor wise)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,114,Doors (floor wise)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,115,Windows (floor wise)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,116,Weathering course (floor wise)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,117,Plinth Area (floor wise)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,118,Years of construction (floor wise)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,119,Age of building (floor wise)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,120,"If the age is not exactly known, further life expected"
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,121,Total remaining life of building estimated
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,122,Depreciation percentage
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,123,Replacement rate of construction
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,124,Replacement Value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,125,Depreciation Value at the rate of 1.33 %
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,126,Present value of the building
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,127,Total value of the building (GF + FF + other floors)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Formula Based Calculation,128,Details of Valuation (Independent Building)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Sum of Attribute,129,AMENITIES & EXTRA ITEMS (Value after Depreciation)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Sum of Attribute,130,PART E - SERVICES (Value after Depreciation)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,131,ABSTRACT VALUE
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,131,Please Enter the Land value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,133,Please Enter the Building value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,134,Please Enter the Amenities value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,134,Please Enter the Services value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,136,Total Say
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,137,Factors favouring for an additional value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,138,Factors favouring for an less value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,139,Present Market Value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Radio,140,Drawing approval
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,141,Estimated Realizable Value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,142,Forced /Distress Sales Value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,143,Was property valued earlier
+Valuation of asset,L & B,Canara Bank,Canara Bank,Tabular,144,Valuer Comment's
+Valuation of asset,L & B,,PART D - POST SITE,Checkbox,22,Upload The Annexures
+Valuation of asset,L & B,,PART A - BANK/PARTY,Radio,,Purpose of valuation
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,,Date of inspection
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Date on which valuation is made
+Valuation of asset,L & B,,PART A - BANK/PARTY,Tabular,,Name of the reported owner
+Valuation of asset,L & B,,PART A - BANK/PARTY,Radio,,Documents produced for perusal
+Valuation of asset,L & B,,PART C - ONSITE,Text,,Postal address of the property
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Radio,,Location of property
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,,Boundaries of the property (North)
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,,Dimensions of the property (North)
+Valuation of asset,L & B,,PART D - POST SITE,Radio,,Value on adopting GLR
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,,Type of Building
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,,Floor Wise Details
+Valuation of asset,L & B,,PART D - POST SITE,Radio,,Value of building by unit plinth area rate
+Valuation of asset,L & B,,PART C - ONSITE,Text,,Plinth area
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Replacement Value
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Present value of the building
+Valuation of asset,L & B,,PART D - POST SITE,Radio,,Amenities and Extra Items
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Present Market Value
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Upload Work Order or Pay-in Receipt
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Value of land by adopting GLR
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Plinth Area (floor wise)
+Valuation of asset,L & B,,PART A - BANK/PARTY,Checkbox,,Purpose for which the valuation is made
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Date on which the valuation is made
+Valuation of asset,L & B,,PART A - BANK/PARTY,Checkbox,,Brief description of the property
+Valuation of asset,L & B,,PART C - ONSITE,Text,,Prevailing market rate (deal references)
+Valuation of asset,L & B,,PART C - ONSITE,Tabular,,Prevailing market land rate references
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Date of issue/validity of layout approved map
+Valuation of asset,L & B,,PART D - POST SITE,Radio,,No. of water closets and their type
+Valuation of asset,L & B,,PART D - POST SITE,Radio,,Details of valuation
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Total abstract of the entire property
+Valuation of asset,L & B,,PART D - POST SITE,Radio,,Guide Line Value
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Valuer comment if any
+Valuation of asset,L & B,,PART D - POST SITE,Radio,,Was property valued earlier
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Other Market Value
+Valuation of asset,L & B,,PART D - POST SITE,Radio,,Prevailing market Rate
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Justification of 20%
+Valuation of asset,L & B,,PART A - BANK/PARTY,Checkbox,,Purpose of valuation
+Valuation of asset,L & B,,PART A - BANK/PARTY,Text,,Name of the reported owner
+Valuation of asset,L & B,,PART C - ONSITE,Text,,Date on which the valuation is made
+Valuation of asset,L & B,,PART C - ONSITE,Radio,,Special remark (acquisition/CRZ/road widening)
+Valuation of asset,L & B,,PART C - ONSITE,Text,,Prevailing market rate references
+Valuation of asset,L & B,,PART D - POST SITE,Radio,,Building Value Calculation
+Valuation of asset,L & B,,PART C - ONSITE,Radio,,Road facilities
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Size of plot (North & South East & West)
+Valuation of asset,L & B,,PART C - ONSITE,Radio,,Type of Building
+Valuation of asset,L & B,,PART C - ONSITE,Text,,Plinth constructed area floor wise
+Valuation of asset,L & B,,PART C - ONSITE,Text,,"Latitude, Longitude and coordinates of the site"
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,,Date of Inspection
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,,Date of Valuation
+Valuation of asset,L & B,,PART C - ONSITE,Text,,Extent of the site
+Valuation of asset,L & B,,PART C - ONSITE,Radio,,Character of locality
+Valuation of asset,L & B,,PART C - ONSITE,Radio,,Plot is town planning approved layout
+Valuation of asset,L & B,,PART C - ONSITE,Radio,,Is it a land-locked land?
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Guideline rate from Registrar's office
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Value of land by adopting PMR
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Prevailing market rate
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Abstract Valuation
+Valuation of asset,L & B,,PART D - POST SITE,Text,,Was property valued earlier
+Valuation of asset,L & B,,PART C - ONSITE,Text,,"Latitude, Longitude and coordinates"
+Valuation of asset,L & B,,PART A - BANK/PARTY,Text,,Name of Borrower
+Valuation of asset,L & B,,PART A - BANK/PARTY,Radio,,"Upload Work Order or Pay-in Receipt, only if fully paid"
+Valuation of asset,L & B,,PART A - GENERAL,Text,,Landmark of the property with Location map
+Valuation of asset,L & B,,PART A - GENERAL,Checkbox,,Land use of property - as per ownership document
+Valuation of asset,L & B,,PART A - GENERAL,Tabular,,Boundaries of the property offered - as per document
+Valuation of asset,L & B,,PART A - GENERAL,Text,,Prevailing market rate
+Valuation of asset,L & B,,PART A - GENERAL,Text,,Collector Guide Line Value
+Valuation of asset,L & B,,PART A - GENERAL,Checkbox,,Purpose of this report to bank
+Valuation of asset,L & B,,PART B - PRE-SITE VISIT,Text,,Date of inspection
+Valuation of asset,L & B,,PART C - ONSITE,Checkbox,,Possibility of flooding/earthquake/fire/natural calamities
+Valuation of asset,L & B,,PART C - ONSITE,Text,,Prevailing market rate (sq.mt/hectare)
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,,Area of the plot/land (supported by plan)
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,,Master plan provisions (land use)
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Tabular,,Ownership documents
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Text,,Details of ground rent payable
+Valuation of asset,L & B,Punjab National Bank,Punjab National Bank,Checkbox,,Description of aqua infrastructure (water supply)
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,,"Here, the procedure adopted for arriving at the valuation"
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,,Total area of plot/land
+Valuation of asset,L & B,Bank of Maharashtra,Bank of Maharashtra,Text,,Assessed/adopted rate
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,,Name of the reported owner (CNRB format)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,,List of documents produced for perusal
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,,Value on adopting GLR (Canara Bank)
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,,Abstract Valuation
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,,Factors favouring additional value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,,Present Market Value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,,Present Distress Value
+Valuation of asset,L & B,Canara Bank,Canara Bank,Text,,Valuer Comments
+Valuation of asset,L & B,Canara Bank,Canara Bank,Checkbox,,Upload The Annexures

@@ -1,0 +1,124 @@
+{
+  "_note": "Seed master data for OMEN AI, derived from the legacy OMEN Assessors LMS overview. Full production volumes (Clients ~1,288; Orderers ~1,973; Questions ~1,791; Bank headings ~400) come later via the import_masters command from a legacy DB export. These are representative dev/seed values.",
+  "service_types": [
+    "Valuation of asset",
+    "Chartered Engineer Certificate"
+  ],
+  "service_sub_types": [
+    "Land",
+    "L & B",
+    "Flat & Shop",
+    "Automobile",
+    "Building",
+    "Plant & Machinery",
+    "Cost Incurred in building"
+  ],
+  "client_types": [
+    "Financial Institution",
+    "Corporate",
+    "Individual"
+  ],
+  "client_divisions": [
+    "ADB",
+    "Agri",
+    "Corporate",
+    "MSME",
+    "Planning and Development",
+    "Retail/PB",
+    "Sales Head",
+    "SME",
+    "SSI"
+  ],
+  "client_designations": [
+    "Assistant General Manager",
+    "Branch Manager",
+    "Chairman & MD",
+    "Chartered Engineer",
+    "Chartered Accountant",
+    "Chief General Manager",
+    "Clerk",
+    "Commercial Tax Officer",
+    "Deputy General Manager",
+    "Senior Manager"
+  ],
+  "billing_heads": [
+    "Professional charges",
+    "Discount (if any)",
+    "Photo charges",
+    "Local/Outstation visit Expenses per site & case",
+    "Additional work",
+    "Delivery / Courier Charges"
+  ],
+  "banks": [
+    "State Bank of India",
+    "Canara Bank",
+    "Punjab National Bank",
+    "Union Bank of India",
+    "UCO Bank",
+    "Bank of Baroda",
+    "Bank of India",
+    "Bank of Maharashtra",
+    "Central Bank of India",
+    "Punjab and Sind Bank",
+    "Madhya Pradesh Gramin Bank",
+    "Madhyanchal Gramin Bank"
+  ],
+  "answer_types": [
+    "Text",
+    "Radio",
+    "Checkbox",
+    "Tabular",
+    "Sum of Attribute",
+    "Formula Based Calculation"
+  ],
+  "detail_categories": [
+    "PART A - BANK / PARTY",
+    "PART - PARTY",
+    "PART B - PRE-SITE VISIT",
+    "PART C - ONSITE",
+    "PART D - POST SITE",
+    "PART A - GENERAL",
+    "Part B - CHARACTERISTIC OF THE SITE",
+    "Part C - VALUATION OF LAND",
+    "Part J - SERVICES",
+    "Part L - TOTAL ABSTRACT",
+    "Part M - GUIDE LINE VALUE OF PROPERTY",
+    "Part N - VALUER COMMENT",
+    "OTHER MARKET VALUES",
+    "Estimate making",
+    "Estimate vetting"
+  ],
+  "_detail_category_note": "Some banks (Punjab National Bank, Bank of Maharashtra, Canara Bank) are used AS detail categories in the legacy Question Bank for bank-specific report templates. In questions_seed.csv these appear in BOTH detail_category and bank_scope. When seeding, treat a bank_scope value as: this question only applies when the case's bank matches.",
+  "usage_of_report_samples": [
+    "Capital Gain Purpose",
+    "Bank Loan / Mortgage",
+    "Certificate for Lab Equipment",
+    "Visa Purpose",
+    "Insurance"
+  ],
+  "scrutiny_document_samples": [
+    "Sale Deed",
+    "Invoice",
+    "Old Fitness Certificate",
+    "Tax Receipt",
+    "Approved Building Plan",
+    "RTO Registration (RC)",
+    "Title Investigation Report (TIR)"
+  ],
+  "dispatch_modes": [
+    "Courier",
+    "Speed Post",
+    "Normal Post",
+    "By Hand",
+    "Pick up from HO",
+    "By E-Mail"
+  ],
+  "verification_stages": [
+    "legal",
+    "social",
+    "technical",
+    "general",
+    "final_approval",
+    "revert"
+  ]
+}

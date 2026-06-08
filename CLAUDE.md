@@ -165,6 +165,28 @@ to the legacy system later; do not build on them now.
 | `AI_MODEL_<TASK>` / `AI_PROVIDER_<TASK>` | — | per-task overrides |
 | `PORT` | (Railway) | gunicorn bind port |
 
+## Project assets (domain reference & seed data)
+
+Real reference material from the legacy OMEN Assessors system, kept in-repo:
+
+- **`docs/legacy_system_reference.md`** — domain **source of truth**: the real
+  OMEN Assessors valuation workflow (masters → lead/work order → CIF valuation →
+  6-stage verification → bank report → invoice/dispatch/receipt), the Question
+  Bank data shape, answer-type semantics, real volumes, and data-hygiene notes.
+  Read this before designing seed data, models, or the autofill agent.
+- **`seed/questions_seed.csv`** — 904 real Question Bank rows. Columns:
+  `service_type`, `service_sub_type`, `bank_scope`, `detail_category`,
+  `answer_type`, `sequence`, `question_text`. A non-empty `bank_scope` means the
+  question applies only when the case's bank matches.
+- **`seed/masters_seed.json`** — master data: banks, service sub types, client
+  types/divisions/designations, billing heads, detail categories, answer types,
+  dispatch modes, verification stages (plus sample usage-of-report and scrutiny
+  documents).
+
+These are a representative subset for dev/test; full production volumes
+(~1,288 clients / ~1,973 orderers / ~1,791 questions / ~400 headings) load later
+via `import_masters` from a legacy export.
+
 ## Roadmap seams (intentionally left open)
 
 - **Auth**: OTP/email plug into the same `/api/auth` endpoints (replace dev-login).
