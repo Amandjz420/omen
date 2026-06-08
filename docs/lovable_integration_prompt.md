@@ -8,10 +8,10 @@ OMEN backend at `https://omen.up.railway.app`. (CORS for `*.lovable.app` and
 > 1. Seed data + users on Railway (one-off): `python manage.py seed_demo`
 >    → creates `admin/admin12345`, `valuer/valuer12345`, `verifier/verifier12345`
 >    and one L&B/SBI valuation. (Or set env `DEV_LOGIN=1` for passwordless login.)
-> 2. For browser→S3 media upload to work, AWS S3 env vars must be set and the
->    bucket's CORS must allow `PUT`/`GET` from the frontend origins. Without S3,
->    the rest of the flow (autofill in mock mode, review, verify, report) still
->    works; media upload will no-op.
+> 2. Media now works **without S3**: files are stored in the DB (mock S3) and
+>    served via signed URLs, so upload/download work out of the box. Set
+>    `PUBLIC_BASE_URL=https://omen.up.railway.app` so signed URLs are absolute.
+>    (Add AWS S3 env vars later to switch to real S3 — same frontend contract.)
 
 ---
 
@@ -75,9 +75,10 @@ Mark `is_mandatory` questions with a required indicator.
 - **GPS**: `POST /valuations/{id}/geo {lat, lng}` (from browser geolocation).
 - **Media (direct browser→S3, 3 steps):**
   1. `POST /media/presign {valuation_id, kind, mime, filename}` →
-     `{asset_id, upload_url, headers}`. `kind` ∈ `audio|photo|document|sketch`.
-  2. `PUT` the file bytes to `upload_url` with the returned `headers` (this goes
-     straight to S3 — do not send it through the API).
+     `{asset_id, upload_url, method, headers}`. `kind` ∈ `audio|photo|document|sketch`.
+  2. Upload the file bytes to `upload_url` using `method` (PUT) with the returned
+     `headers` — **no auth header** (the URL is pre-signed). Do not route it
+     through the API client's auth interceptor.
   3. `POST /media/confirm {asset_id, size, duration?, lat?, lng?}`.
 - List uploaded media: `GET /valuations/{id}/media` (each has a `download_url`).
 - Provide a one-tap "record voice note" (audio), "photo", and "document" upload.

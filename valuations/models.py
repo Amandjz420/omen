@@ -124,6 +124,23 @@ class Answer(BaseModel):
         return f"Answer({self.question_id}) = {self.value!r}"
 
 
+class StoredBlob(BaseModel):
+    """A stored file's bytes, keyed by storage key.
+
+    Backs the DB "mock S3" storage backend: media and generated reports live here
+    (Postgres ``bytea``) when no real S3 bucket is configured, so files survive
+    Railway's ephemeral filesystem. Swapped out transparently once S3 creds exist.
+    """
+
+    key = models.CharField(max_length=500, unique=True)
+    data = models.BinaryField()
+    content_type = models.CharField(max_length=120, blank=True)
+    size = models.BigIntegerField(default=0)
+
+    def __str__(self) -> str:
+        return f"StoredBlob({self.key})"
+
+
 class MarketRateLookup(BaseModel):
     """A market-rate search result (from Perplexity) surfaced to the valuer."""
 

@@ -212,6 +212,11 @@ AWS_DEFAULT_ACL = None
 AWS_S3_FILE_OVERWRITE = False
 AWS_QUERYSTRING_AUTH = True
 
+# Absolute base URL for this API (e.g. https://omen.up.railway.app). Used to
+# build signed media/report URLs in contexts without a request (the AI worker).
+# When blank, request-derived hosts are used where available.
+PUBLIC_BASE_URL = env("PUBLIC_BASE_URL", "")
+
 # ``True`` when real S3 credentials are configured. When False the media layer
 # falls back to a local presign stub so the upload flow is testable offline.
 USE_S3 = bool(AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY and AWS_STORAGE_BUCKET_NAME)

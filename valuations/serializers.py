@@ -39,7 +39,8 @@ class MediaAssetSerializer(serializers.ModelSerializer):
     def get_download_url(self, obj: MediaAsset) -> str | None:
         if not obj.uploaded:
             return None
-        return storage.presign_get(obj.s3_key)
+        request = self.context.get("request")
+        return storage.presign_get(obj.s3_key, request=request)
 
 
 class AnswerSerializer(serializers.ModelSerializer):

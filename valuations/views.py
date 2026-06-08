@@ -2,11 +2,12 @@
 
 from __future__ import annotations
 
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from drf_spectacular.utils import extend_schema
 from rest_framework import mixins, status, viewsets
 from rest_framework.decorators import action
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -129,7 +130,9 @@ class ValuationViewSet(
         """``GET /api/valuations/{id}/media`` → assets with presigned GET URLs."""
         valuation = self.get_object()
         assets = valuation.media_assets.all()
-        return Response(MediaAssetSerializer(assets, many=True).data)
+        return Response(
+            MediaAssetSerializer(assets, many=True, context={"request": request}).data
+        )
 
     # --- Answers ----------------------------------------------------------
     @extend_schema(responses=AnswerSerializer(many=True))
@@ -188,7 +191,7 @@ class ValuationViewSet(
         """``GET /api/valuations/{id}/report`` → presigned PDF URL (latest)."""
         valuation = self.get_object()
         key = f"valuations/{valuation.id}/report/valuation_report.pdf"
-        return Response({"url": storage.presign_get(key)})
+        return Response({"url": storage.presign_get(key, request=request)})
 
 
 class AnswerViewSet(mixins.UpdateModelMixin, viewsets.GenericViewSet):
@@ -249,11 +252,12 @@ class MediaPresignView(APIView):
         asset = MediaAsset.objects.create(
             valuation=valuation, kind=kind, s3_key=key, mime=mime, filename=filename
         )
-        presigned = storage.presign_put(key, mime)
+        presigned = storage.presign_put(key, mime, request=request)
         return Response(
             {
                 "asset_id": str(asset.id),
                 "upload_url": presigned["upload_url"],
+                "method": presigned["method"],
                 "headers": presigned["headers"],
             }
         )
@@ -280,4 +284,58 @@ class MediaConfirmView(APIView):
             asset.longitude = data["lng"]
             fields.append("longitude")
         asset.save(update_fields=fields)
-        return Response(MediaAssetSerializer(asset).data)
+        return Response(MediaAssetSerializer(asset, context={"request": request}).data)
+
+
+class StoragePutView(APIView):
+    """Mock-S3 upload target: ``PUT /api/storage/upload?token=…`` with the raw body.
+
+    Used only when no real S3 bucket is configured. The signed token (from
+    ``/api/media/presign``) authorizes the write, so no JWT is needed — exactly
+    like a presigned S3 PUT. Bytes are stored in the DB (``StoredBlob``).
+    """
+
+    permission_classes = [AllowAny]
+
+    def put(self, request):
+        key = storage.verify(request.query_params.get("token", ""), "put")
+        if not key:
+            return Response(
+                {"detail": "Invalid or expired upload token."},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+        mime = request.content_type or "application/octet-stream"
+        storage.put_bytes(key, request.body, mime)
+        return Response(status=status.HTTP_200_OK)
+
+    # Some clients send POST; accept both.
+    post = put
+
+
+class StorageGetView(APIView):
+    """Mock-S3 download: ``GET /api/storage/download?token=…`` streams the bytes.
+
+    The signed token authorizes the read (works in ``<img src>`` cross-origin),
+    mirroring a presigned S3 GET.
+    """
+
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        key = storage.verify(request.query_params.get("token", ""), "get")
+        if not key:
+            return Response(
+                {"detail": "Invalid or expired download token."},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+        blob = storage.get_blob(key)
+        if blob is None:
+            return Response(
+                {"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND
+            )
+        resp = HttpResponse(
+            bytes(blob.data),
+            content_type=blob.content_type or "application/octet-stream",
+        )
+        resp["Content-Disposition"] = "inline"
+        return resp

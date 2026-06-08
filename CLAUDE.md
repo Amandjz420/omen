@@ -133,8 +133,12 @@ categories; those rows carry the bank in both `detail_category` and `bank_scope`
 
 - Media in S3 (private bucket); uploads go **browser → S3** via presigned PUT;
   downloads via presigned GET. No media passes through Django.
-- `valuations/storage.py` falls back to local filesystem when S3 creds are
-  absent (`USE_S3` auto-detects), so the flow is testable offline.
+- `valuations/storage.py` has two backends behind one interface (`USE_S3`
+  auto-detects from creds): **S3**, or a **DB-backed "mock S3"** that stores
+  bytes in a `StoredBlob` row (Postgres `bytea`) and serves them via signed,
+  time-limited URLs to `/api/storage/{upload,download}` — same presign→PUT→confirm
+  contract, so the frontend is identical. The DB store survives Railway's
+  ephemeral filesystem. Set `PUBLIC_BASE_URL` so worker-generated URLs are absolute.
 - CORS restricted to `FRONTEND_ORIGIN` (prod default: the Lovable app
   `https://omtas.lovable.app` + custom domain `https://omen.devmate.in`, plus a
   regex for `*.lovable.app` preview subdomains). Same origins trusted for CSRF.
@@ -192,7 +196,8 @@ to the legacy system later; do not build on them now.
 | `JWT_ACCESS_MINUTES` / `JWT_REFRESH_DAYS` | `60` / `7` | token lifetimes |
 | `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` | — | S3 creds (unset → local stub) |
 | `AWS_STORAGE_BUCKET_NAME` / `AWS_S3_REGION_NAME` | — / `ap-south-1` | S3 bucket |
-| `AWS_S3_PRESIGN_EXPIRY` | `3600` | presigned URL TTL (s) |
+| `AWS_S3_PRESIGN_EXPIRY` | `3600` | presigned URL TTL (s); also the mock signed-URL TTL |
+| `PUBLIC_BASE_URL` | — | absolute base URL of this API, for worker-built media/report URLs |
 | `DEEPINFRA_API_KEY` | — | DeepInfra key |
 | `DEEPINFRA_BASE_URL` | `https://api.deepinfra.com/v1/openai` | DeepInfra base |
 | `PERPLEXITY_API_KEY` | — | Perplexity key |
