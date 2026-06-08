@@ -214,8 +214,11 @@ AWS_QUERYSTRING_AUTH = True
 
 # Absolute base URL for this API (e.g. https://omen.up.railway.app). Used to
 # build signed media/report URLs in contexts without a request (the AI worker).
-# When blank, request-derived hosts are used where available.
+# Falls back to Railway's injected RAILWAY_PUBLIC_DOMAIN so it needs no manual
+# config on Railway; when blank, request-derived hosts are used where available.
 PUBLIC_BASE_URL = env("PUBLIC_BASE_URL", "")
+if not PUBLIC_BASE_URL and env("RAILWAY_PUBLIC_DOMAIN"):
+    PUBLIC_BASE_URL = f"https://{env('RAILWAY_PUBLIC_DOMAIN')}"
 
 # ``True`` when real S3 credentials are configured. When False the media layer
 # falls back to a local presign stub so the upload flow is testable offline.

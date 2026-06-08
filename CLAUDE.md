@@ -152,6 +152,14 @@ categories; those rows carry the bank in both `detail_category` and `bank_scope`
   in `requirements.txt`. Migrations run via the release/preDeploy command.
 - **Web** `gunicorn omen.wsgi`; **Worker** `run_ai_worker --loop` (or a Railway
   cron running `--once --batch 5`). The job queue is DB-backed (no Celery/Redis).
+- **Release** runs `python manage.py release` (pre-deploy + Procfile): migrate +
+  collectstatic + `seed_demo` (auto-seed; set `SEED_ON_RELEASE=0` to disable).
+- **Config from code** (no dashboard vars needed): `DJANGO_SETTINGS_MODULE`
+  defaults to prod in `wsgi.py`; `PUBLIC_BASE_URL` derives from
+  `RAILWAY_PUBLIC_DOMAIN`; `ALLOWED_HOSTS` allows `.railway.app`; CORS/CSRF
+  default to the Lovable origins. **Must set in the dashboard** (secrets — never
+  in code/repo): `DATABASE_URL=${{Postgres.DATABASE_URL}}` and `SECRET_KEY`
+  (plus AI keys when going live). Set `DATABASE_URL` on **both** web and worker.
 
 ## API contract (JWT bearer; JSON; no trailing slashes)
 
