@@ -67,7 +67,7 @@ def test_autofill_enqueues_job_and_fills_answers(valuer_client, seeded):
 
 @pytest.mark.django_db
 def test_answer_patch_confirm_clears_red(valuer_client, seeded):
-    q = seeded.work_order.service_type.questions.filter(is_mandatory=True).first()
+    q = seeded.work_order.service_type.questions.first()
     answer = Answer.objects.create(
         valuation=seeded, question=q, confidence=Confidence.RED
     )
@@ -84,7 +84,10 @@ def test_answer_patch_confirm_clears_red(valuer_client, seeded):
 
 @pytest.mark.django_db
 def test_submit_blocked_by_red_mandatory(valuer_client, seeded):
-    q = seeded.work_order.service_type.questions.filter(is_mandatory=True).first()
+    # Legacy questions are not mandatory by default; mark one for this scenario.
+    q = seeded.work_order.service_type.questions.first()
+    q.is_mandatory = True
+    q.save(update_fields=["is_mandatory"])
     Answer.objects.create(valuation=seeded, question=q, confidence=Confidence.RED)
     resp = valuer_client.post(f"/api/valuations/{seeded.id}/submit")
     assert resp.status_code == 400

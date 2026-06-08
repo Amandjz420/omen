@@ -1,167 +1,76 @@
-"""Seed a minimal end-to-end demo dataset.
+"""Seed a small, curated demo on top of the real legacy data.
 
-Creates one admin + one valuer + one verifier, a couple of banks/orderers, a few
-service sub-types, a small Question Bank (Land + L&B), one work order and one
-valuation — enough to click through the whole flow.
+Runs ``seed_from_legacy`` first (idempotent) so the full Question Bank exists,
+then adds one admin + one valuer + one verifier, two sample banks, a couple of
+orderers, and one complete **L & B valuation for State Bank of India** — enough
+to click through capture → autofill → review → verify, with a real rendered
+question set.
 
-Idempotent: re-running updates/reuses existing rows by natural keys.
+Idempotent: re-running reuses existing rows by natural keys.
 """
 
 from __future__ import annotations
 
-from django.core.management.base import BaseCommand
+from django.core.management import call_command
+from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
 from accounts.models import Role, User
 from leads.models import WorkOrder, WorkOrderStatus
-from masters.models import (
-    AnswerType,
-    Bank,
-    BankReportHeading,
-    ClientKind,
-    DetailCategory,
-    Orderer,
-    Question,
-    ReportSetup,
-    ServiceSubType,
-    ServiceType,
-)
+from masters.models import Bank, Orderer, ServiceSubType, ServiceType
+from masters.selectors import questions_for
 from valuations.models import Valuation, ValuationStatus
+
+# The demo case targets a real legacy combination.
+DEMO_SERVICE_TYPE = "Valuation of asset"
+DEMO_SUB_TYPE = "L & B"
+DEMO_BANK = "State Bank of India"
+SECOND_BANK = "Canara Bank"
 
 
 class Command(BaseCommand):
-    help = "Seed a minimal demo dataset for end-to-end testing."
+    help = "Seed a curated end-to-end demo (users + an L&B/SBI valuation) on top of legacy data."
 
     @transaction.atomic
     def handle(self, *args, **opts):
-        # --- Users --------------------------------------------------------
-        admin, _ = User.objects.get_or_create(
-            username="admin",
-            defaults={"role": Role.ADMIN, "is_staff": True, "is_superuser": True},
-        )
-        admin.set_password("admin12345")
-        admin.role = Role.ADMIN
-        admin.is_staff = admin.is_superuser = True
-        admin.save()
+        # 1. Ensure the real masters + Question Bank are loaded.
+        self.stdout.write("Loading legacy masters + Question Bank (seed_from_legacy)…")
+        call_command("seed_from_legacy")
 
-        valuer, _ = User.objects.get_or_create(
-            username="valuer", defaults={"role": Role.VALUER}
-        )
-        valuer.set_password("valuer12345")
-        valuer.save()
+        # 2. Users (one per role).
+        admin = self._user("admin", Role.ADMIN, "admin12345", staff=True, superuser=True)
+        valuer = self._user("valuer", Role.VALUER, "valuer12345")
+        self._user("verifier", Role.VERIFIER, "verifier12345")
 
-        verifier, _ = User.objects.get_or_create(
-            username="verifier", defaults={"role": Role.VERIFIER}
-        )
-        verifier.set_password("verifier12345")
-        verifier.save()
+        # 3. Two sample banks (already created by the legacy seed) + orderers.
+        try:
+            sbi = Bank.objects.get(name=DEMO_BANK)
+            canara = Bank.objects.get(name=SECOND_BANK)
+        except Bank.DoesNotExist as exc:  # pragma: no cover - legacy seed guarantees these
+            raise CommandError(
+                f"Expected bank missing after seed_from_legacy: {exc}"
+            ) from exc
 
-        # --- Service taxonomy --------------------------------------------
-        land, _ = ServiceType.objects.get_or_create(
-            code="land", defaults={"name": "Land"}
-        )
-        lnb, _ = ServiceType.objects.get_or_create(
-            code="lnb", defaults={"name": "Land & Building"}
-        )
-        sub_land, _ = ServiceSubType.objects.get_or_create(
-            service_type=land, code="land", defaults={"name": "Land"}
-        )
-        sub_lnb, _ = ServiceSubType.objects.get_or_create(
-            service_type=lnb, code="lnb", defaults={"name": "L & B"}
-        )
-
-        # --- Banks / orderers --------------------------------------------
-        sbi, _ = Bank.objects.get_or_create(
-            name="State Bank of India", defaults={"kind": ClientKind.BANK, "code": "SBI"}
-        )
-        hdfc, _ = Bank.objects.get_or_create(
-            name="HDFC Bank", defaults={"kind": ClientKind.BANK, "code": "HDFC"}
-        )
-        orderer, _ = Orderer.objects.get_or_create(
+        orderer_sbi, _ = Orderer.objects.get_or_create(
             bank=sbi, name="R. Sharma", defaults={"email": "rsharma@sbi.example"}
         )
-
-        # --- Detail categories (report parts) ----------------------------
-        part_a, _ = DetailCategory.objects.get_or_create(
-            code="part-a", defaults={"name": "Part A — General", "sequence": 1}
-        )
-        part_b, _ = DetailCategory.objects.get_or_create(
-            code="part-b", defaults={"name": "Part B — Technical", "sequence": 2}
+        Orderer.objects.get_or_create(
+            bank=canara, name="P. Nair", defaults={"email": "pnair@canara.example"}
         )
 
-        # --- Question Bank (Land + L&B sample) ---------------------------
-        questions = [
-            (land, sub_land, part_a, "Name of the owner", AnswerType.TEXT, {}, 1, True),
-            (land, sub_land, part_a, "Survey / Plot number", AnswerType.TEXT, {}, 2, True),
-            (
-                land, sub_land, part_a, "Type of land",
-                AnswerType.RADIO,
-                {"choices": [{"value": "residential", "label": "Residential"},
-                             {"value": "commercial", "label": "Commercial"},
-                             {"value": "agricultural", "label": "Agricultural"}]},
-                3, True,
-            ),
-            (land, sub_land, part_b, "Extent / area (sq ft)", AnswerType.TEXT, {}, 4, True),
-            (
-                land, sub_land, part_b, "Adopted rate per sq ft (INR)",
-                AnswerType.FORMULA, {"expression": "market_rate"}, 5, False,
-            ),
-            (lnb, sub_lnb, part_a, "Name of the owner", AnswerType.TEXT, {}, 1, True),
-            (
-                lnb, sub_lnb, part_b, "Type of construction",
-                AnswerType.RADIO,
-                {"choices": [{"value": "rcc", "label": "RCC"},
-                             {"value": "load_bearing", "label": "Load bearing"}]},
-                2, True,
-            ),
-            (lnb, sub_lnb, part_b, "Number of floors", AnswerType.TEXT, {}, 3, True),
-            (
-                lnb, sub_lnb, part_b, "Total valuation (INR)",
-                AnswerType.FORMULA, {"expression": "land_value + building_value"}, 4, False,
-            ),
-        ]
-        created_qs = []
-        for st, sub, cat, text, atype, opts, seq, mand in questions:
-            q, _ = Question.objects.get_or_create(
-                service_type=st,
-                sub_type=sub,
-                text=text,
-                defaults={
-                    "detail_category": cat,
-                    "answer_type": atype,
-                    "options": opts,
-                    "sequence": seq,
-                    "is_mandatory": mand,
-                },
-            )
-            created_qs.append(q)
-
-        # --- Bank report headings + setup (SBI / L&B) --------------------
-        h_general, _ = BankReportHeading.objects.get_or_create(
-            bank=sbi, title="1. General Details", defaults={"sequence": 1}
+        # 4. The L & B / SBI work order + valuation.
+        service_type = ServiceType.objects.get(name=DEMO_SERVICE_TYPE)
+        sub_type = ServiceSubType.objects.get(
+            service_type=service_type, name=DEMO_SUB_TYPE
         )
-        h_tech, _ = BankReportHeading.objects.get_or_create(
-            bank=sbi, title="2. Technical Details", defaults={"sequence": 2}
-        )
-        for q in created_qs:
-            if q.service_type == lnb:
-                heading = h_general if q.detail_category == part_a else h_tech
-                ReportSetup.objects.get_or_create(
-                    bank=sbi,
-                    service_type=lnb,
-                    sub_type=sub_lnb,
-                    question=q,
-                    defaults={"heading": heading, "sequence": q.sequence},
-                )
 
-        # --- Work order + valuation (SBI / L&B) --------------------------
         wo, _ = WorkOrder.objects.get_or_create(
             reference="WO-DEMO-001",
             defaults={
                 "bank": sbi,
-                "orderer": orderer,
-                "service_type": lnb,
-                "sub_type": sub_lnb,
+                "orderer": orderer_sbi,
+                "service_type": service_type,
+                "sub_type": sub_type,
                 "property_address": "12 MG Road, Bengaluru, Karnataka",
                 "status": WorkOrderStatus.ASSIGNED,
             },
@@ -178,12 +87,33 @@ class Command(BaseCommand):
             },
         )
 
-        self.stdout.write(self.style.SUCCESS("Demo data seeded."))
-        self.stdout.write(f"  admin / admin12345 (role=admin)")
-        self.stdout.write(f"  valuer / valuer12345 (role=valuer)")
-        self.stdout.write(f"  verifier / verifier12345 (role=verifier)")
-        self.stdout.write(f"  Work order: {wo.reference}")
-        self.stdout.write(f"  Valuation id: {valuation.id}")
+        # 5. Report how many questions the case actually renders.
+        q_count = questions_for(
+            service_type_id=service_type.id,
+            sub_type_id=sub_type.id,
+            bank_id=sbi.id,
+        ).count()
+
+        self.stdout.write(self.style.SUCCESS("\nDemo data seeded."))
+        self.stdout.write("  admin / admin12345 (role=admin)")
+        self.stdout.write("  valuer / valuer12345 (role=valuer)")
+        self.stdout.write("  verifier / verifier12345 (role=verifier)")
+        self.stdout.write(f"  Work order : {wo.reference} — {DEMO_SUB_TYPE} / {DEMO_BANK}")
+        self.stdout.write(f"  Valuation  : {valuation.id}")
+        self.stdout.write(f"  Renders {q_count} questions for this case.")
         self.stdout.write(
-            "  Dev login (no password): POST /api/auth/login {\"username\": \"valuer\"}"
+            '  Dev login (no password): POST /api/auth/login {"username": "valuer"}'
         )
+
+    @staticmethod
+    def _user(username, role, password, *, staff=False, superuser=False) -> User:
+        user, _ = User.objects.get_or_create(
+            username=username,
+            defaults={"role": role, "is_staff": staff, "is_superuser": superuser},
+        )
+        user.role = role
+        user.is_staff = staff or superuser
+        user.is_superuser = superuser
+        user.set_password(password)
+        user.save()
+        return user

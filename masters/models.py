@@ -69,19 +69,46 @@ class Bank(BaseModel):
 
 
 class ClientDivision(BaseModel):
-    """A division/branch within a bank/client."""
+    """A division within a bank/client (e.g. ADB, MSME, Retail/PB).
 
-    bank = models.ForeignKey(Bank, on_delete=models.CASCADE, related_name="divisions")
+    In the legacy system these are a *global* configuration list, not per-bank,
+    so ``bank`` is optional. It may be set when a division is specific to one
+    institution.
+    """
+
+    bank = models.ForeignKey(
+        Bank,
+        on_delete=models.CASCADE,
+        related_name="divisions",
+        null=True,
+        blank=True,
+    )
     name = models.CharField(max_length=200)
 
     def __str__(self) -> str:
-        return f"{self.bank.name} – {self.name}"
+        if self.bank_id:
+            return f"{self.bank.name} – {self.name}"
+        return self.name
 
 
 class ClientDesignation(BaseModel):
     """A designation an orderer can hold (e.g. Branch Manager)."""
 
     name = models.CharField(max_length=120, unique=True)
+
+    def __str__(self) -> str:
+        return self.name
+
+
+class BillingHead(BaseModel):
+    """A billing line-item head (e.g. Professional charges, Photo charges).
+
+    Master data for the invoicing workflow, which connects to the legacy billing
+    system later. Seeded from ``masters_seed.json``.
+    """
+
+    name = models.CharField(max_length=200, unique=True)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self) -> str:
         return self.name

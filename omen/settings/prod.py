@@ -4,7 +4,10 @@ from .base import *  # noqa: F401,F403
 from .base import env_bool, env_list
 
 DEBUG = env_bool("DEBUG", False)
-ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", "")
+# Railway sends health-check probes with Host "healthcheck.railway.app", so it
+# must always be allowed or Django rejects them with 400 DisallowedHost (even
+# though the app started fine). Configured hosts are added on top.
+ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", "") + ["healthcheck.railway.app"]
 
 # Behind Railway's proxy (TLS terminated upstream).
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")

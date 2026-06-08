@@ -25,8 +25,9 @@ Python 3.12 · Django 5.x · DRF · PostgreSQL (`dj-database-url`, SQLite fallba
 omen/settings/{base,dev,prod}.py   # split settings; DJANGO_SETTINGS_MODULE picks one
 core/        # BaseModel (uuid pk, created/updated), pagination, exception envelope, RolePermission, seed_demo
 accounts/    # custom User (roles: valuer/verifier/admin/office), JWT login/refresh/me, dev-login
-masters/     # config: ServiceType/SubType, Bank(=Client), Orderer, DetailCategory, Question Bank,
-             #   BankReportHeading, ReportSetup; selectors.questions_for(); import_masters scaffold
+masters/     # config: ServiceType/SubType, Bank(=Client), Orderer, ClientDivision/Designation, BillingHead,
+             #   DetailCategory, Question Bank, BankReportHeading, ReportSetup; selectors.questions_for();
+             #   seed_from_legacy (real data) + import_masters scaffold (full legacy export)
 leads/       # Lead, WorkOrder (client+orderer+service+subtype+bank → scopes the question set)
 valuations/  # Valuation, MediaAsset, Answer, MarketRateLookup; storage.py (S3 presign + fallback)
 ai/          # router.py (THE hub), services.py (task fns), jobs.py (AIJob queue), run_ai_worker,
@@ -84,12 +85,37 @@ python manage.py run_ai_worker --loop --interval 3   # worker service mode
 
 ```bash
 python manage.py migrate
-python manage.py seed_demo                 # admin/valuer/verifier + banks + Question Bank + 1 valuation
-python manage.py import_masters <entity> <file>   # SCAFFOLD only (clients/orderers/questions/headings)
+python manage.py seed_from_legacy          # load real masters + 904-row Question Bank from seed/ (idempotent)
+python manage.py seed_demo                 # runs seed_from_legacy, then adds users + 1 L&B/SBI valuation
+python manage.py import_masters <entity> <file>   # SCAFFOLD only (full legacy export, later)
 python manage.py runserver
 python manage.py run_ai_worker --loop --interval 3
 pytest
 ```
+
+### Seed data (see `docs/legacy_system_reference.md`)
+
+- **`seed_from_legacy`** loads `seed/masters_seed.json` + `seed/questions_seed.csv`
+  idempotently: ServiceTypes, ServiceSubTypes, Banks, ClientDivisions (global),
+  ClientDesignations, BillingHeads, normalized+de-duplicated DetailCategories,
+  and all **900 distinct** Question Bank rows (904 CSV rows; 4 are exact dupes).
+  `bank_scope` → `Question.bank`. ClientTypes/AnswerTypes are *validated* against
+  the `ClientKind`/`AnswerType` enums (no rows — they're code enums by design).
+  Detail-category normalization: trim, collapse whitespace, remove spaces around
+  `/`, uppercase; ordered by JSON sequence with CSV-only categories appended.
+- **`seed_demo`** builds a small curated demo on top: admin/valuer/verifier,
+  two sample banks (SBI + Canara), a couple of orderers, and one end-to-end
+  **L & B valuation for State Bank of India** (renders 222 questions).
+
+### Question-filtering rule (`masters.selectors.questions_for`)
+
+`GET /api/questions?service_type=&sub_type=&bank=` returns the case's question
+set: **filter by service_type**; **sub_type** matches the given sub-type *or*
+questions with no sub-type; **bank_scope** is empty *or* equals the requested
+bank (so bank-agnostic questions always apply, bank-scoped ones only when the
+case's bank matches). **Ordered by `detail_category.sequence`, then `sequence`.**
+Some legacy banks (PNB, Bank of Maharashtra, Canara) double as detail
+categories; those rows carry the bank in both `detail_category` and `bank_scope`.
 
 ## Conventions
 

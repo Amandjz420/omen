@@ -5,6 +5,7 @@ from django.contrib import admin
 from .models import (
     Bank,
     BankReportHeading,
+    BillingHead,
     ClientDesignation,
     ClientDivision,
     DetailCategory,
@@ -76,3 +77,4 @@ class ReportSetupAdmin(admin.ModelAdmin):
 
 admin.site.register(ClientDivision)
 admin.site.register(ClientDesignation)
+admin.site.register(BillingHead)
