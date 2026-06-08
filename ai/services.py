@@ -11,6 +11,8 @@ from __future__ import annotations
 
 import logging
 
+from django.conf import settings
+
 from valuations import storage
 from valuations.models import (
     Answer,
@@ -174,6 +176,47 @@ def _gather_inputs(valuation) -> dict:
     }
 
 
+def _mock_autofill(question_payload: list[dict], inputs: dict) -> dict:
+    """Deterministic offline suggestions, one per question (all ``amber``).
+
+    Used only when ``AI_MOCK`` is on and the (mock) router returned no answers, so
+    the demo populates with realistic-shaped values + evidence the valuer reviews.
+    """
+    # Point evidence at the first available source asset, if any.
+    first_asset = None
+    snippet = ""
+    if inputs.get("transcripts"):
+        first_asset = inputs["transcripts"][0].get("asset_id")
+        snippet = (inputs["transcripts"][0].get("english") or "")[:80]
+    elif inputs.get("documents"):
+        first_asset = inputs["documents"][0].get("asset_id")
+        snippet = "extracted from document"
+    evidence = [{"asset_id": first_asset, "snippet": snippet}] if first_asset else []
+
+    answers = {}
+    for q in question_payload:
+        atype = q["answer_type"]
+        options = q.get("options") or {}
+        choices = options.get("choices") if isinstance(options, dict) else None
+        if atype in _JUDGMENT_TYPES:
+            value = None  # never suggest a numeric/derived figure
+        elif atype == "radio":
+            value = choices[0]["value"] if choices else "[AI draft] option 1"
+        elif atype == "checkbox":
+            value = [choices[0]["value"]] if choices else ["[AI draft] option 1"]
+        elif atype == "tabular":
+            value = [{"north": "road", "south": "plot", "east": "plot", "west": "road"}]
+        else:  # text
+            value = "[AI draft] to be confirmed by valuer"
+        answers[q["question_id"]] = {
+            "question_id": q["question_id"],
+            "value": value,
+            "confidence": Confidence.AMBER,
+            "evidence": evidence,
+        }
+    return answers
+
+
 def autofill_answers(valuation) -> dict:
     """Map all gathered inputs onto the case's Question set and upsert Answers.
 
@@ -206,18 +249,25 @@ def autofill_answers(valuation) -> dict:
     ]
     inputs = _gather_inputs(valuation)
 
+    bank_name = wo.bank.name
+    sub_type = wo.sub_type.name if wo.sub_type_id else ""
     result = router.complete(
         TaskType.FORM_AUTOFILL,
         [
             {
                 "role": "system",
                 "content": (
-                    "You fill a bank property-valuation form from field evidence. "
-                    "For each question produce a value consistent with its answer_type "
-                    "and options. Cite evidence by asset_id with a short supporting "
-                    "snippet. Use confidence 'green' only when directly supported, "
+                    f"You are an autofill agent for a {bank_name} property-valuation "
+                    f"report ({wo.service_type.name} / {sub_type}) in India. Fill the "
+                    "bank's CIF question set from the field evidence (voice transcript, "
+                    "document extraction, photo analysis, GPS). For each question "
+                    "produce a value consistent with its answer_type and options "
+                    "(radio/checkbox values must come from options; tabular returns "
+                    "rows). Cite evidence by asset_id with a short supporting snippet. "
+                    "Confidence: 'green' only when directly supported by evidence, "
                     "'amber' when inferred or judgmental, 'red' when unsupported. "
-                    "Never assert a final valuation figure as confident."
+                    "NEVER assert a rate, area or final valuation figure as confident — "
+                    "those are always 'amber' for the human valuer to confirm."
                 ),
             },
             {
@@ -247,6 +297,13 @@ def autofill_answers(valuation) -> dict:
         ai_answers = {a["question_id"]: a for a in parsed.get("answers", [])}
     except (ValueError, KeyError, TypeError):
         ai_answers = {}
+
+    # Offline demo: the mock router can't see the question set, so synthesize
+    # deterministic per-question suggestions (always amber — AI-suggested, for the
+    # valuer to confirm) so the whole capture→autofill→review flow is visible
+    # without provider keys. No effect once real keys are configured.
+    if settings.AI_MOCK and not ai_answers:
+        ai_answers = _mock_autofill(question_payload, inputs)
 
     filled = 0
     for q in questions:

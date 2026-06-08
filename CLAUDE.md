@@ -135,8 +135,19 @@ categories; those rows carry the bank in both `detail_category` and `bank_scope`
   downloads via presigned GET. No media passes through Django.
 - `valuations/storage.py` falls back to local filesystem when S3 creds are
   absent (`USE_S3` auto-detects), so the flow is testable offline.
-- CORS restricted to `FRONTEND_ORIGIN` (prod). All AI/AWS keys are backend env
-  vars only.
+- CORS restricted to `FRONTEND_ORIGIN` (prod default: the Lovable app
+  `https://omtas.lovable.app` + custom domain `https://omen.devmate.in`, plus a
+  regex for `*.lovable.app` preview subdomains). Same origins trusted for CSRF.
+  All AI/AWS keys are backend env vars only.
+
+## Railway deployment notes
+
+- **Postgres**: add the Railway Postgres plugin and set
+  `DATABASE_URL=${{Postgres.DATABASE_URL}}` on the web/worker services. The code
+  already reads `DATABASE_URL` (SQLite is only the local fallback); `psycopg` is
+  in `requirements.txt`. Migrations run via the release/preDeploy command.
+- **Web** `gunicorn omen.wsgi`; **Worker** `run_ai_worker --loop` (or a Railway
+  cron running `--once --batch 5`). The job queue is DB-backed (no Celery/Redis).
 
 ## API contract (JWT bearer; JSON; no trailing slashes)
 
