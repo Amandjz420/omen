@@ -30,8 +30,12 @@ SECURE_HSTS_PRELOAD = True
 # FRONTEND_ORIGIN env var (comma list) to add/replace origins without a deploy.
 DEFAULT_FRONTEND_ORIGINS = "https://omtas.lovable.app,https://omen.devmate.in"
 CORS_ALLOWED_ORIGINS = env_list("FRONTEND_ORIGIN", DEFAULT_FRONTEND_ORIGINS)
-# Also allow Lovable preview subdomains (https://<id>.lovable.app).
-CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://[a-z0-9-]+\.lovable\.app$"]
+# Also allow Lovable preview subdomains on both preview domains
+# (https://<id>.lovable.app and https://<id>.lovableproject.com).
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.lovable\.app$",
+    r"^https://.*\.lovableproject\.com$",
+]
 
 # CSRF trusts the same frontend origins plus any configured Railway domain.
 CSRF_TRUSTED_ORIGINS = env_list("CSRF_TRUSTED_ORIGINS", DEFAULT_FRONTEND_ORIGINS)
