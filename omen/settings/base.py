@@ -111,8 +111,14 @@ ASGI_APPLICATION = "omen.asgi.application"
 # ---------------------------------------------------------------------------
 # Database (Postgres via DATABASE_URL; SQLite fallback for local dev)
 # ---------------------------------------------------------------------------
-DATABASE_URL = env("DATABASE_URL")
-if DATABASE_URL:
+DATABASE_URL = (env("DATABASE_URL") or "").strip()
+# Only treat it as a real DB URL when it has a scheme (e.g. ``postgres://…``).
+# This guards against an *unresolved* Railway reference placeholder such as
+# "${{Postgres.DATABASE_URL}}" during the build phase (service references only
+# resolve at deploy/runtime) — which would otherwise crash dj_database_url. In
+# that case we fall back to SQLite so settings import cleanly; the real Postgres
+# URL is present at deploy time.
+if "://" in DATABASE_URL:
     DATABASES = {
         "default": dj_database_url.parse(DATABASE_URL, conn_max_age=600),
     }
