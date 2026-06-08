@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Valuation Report</title>
+  <style>
+    body { font-family: "Helvetica", Arial, sans-serif; font-size: 11px; color: #222; }
+    h1 { font-size: 18px; margin-bottom: 4px; }
+    .meta { color: #555; margin-bottom: 16px; }
+    h2 { font-size: 13px; background: #f0f0f0; padding: 4px 6px; margin-top: 18px; }
+    table { width: 100%; border-collapse: collapse; }
+    td { padding: 4px 6px; border-bottom: 1px solid #eee; vertical-align: top; }
+    td.label { width: 45%; font-weight: bold; }
+    .conf-green { color: #1a7f37; }
+    .conf-amber { color: #b26a00; }
+    .conf-red { color: #c0392b; }
+  </style>
+</head>
+<body>
+  <h1>Property Valuation Report</h1>
+  <div class="meta">
+    Work Order: {{ valuation.work_order.reference }}<br>
+    Bank: {{ valuation.work_order.bank.name }}<br>
+    Service: {{ valuation.work_order.service_type.name }}{% if valuation.work_order.sub_type %} / {{ valuation.work_order.sub_type.name }}{% endif %}<br>
+    Locality: {{ valuation.locality }}<br>
+    {% if valuation.latitude %}GPS: {{ valuation.latitude }}, {{ valuation.longitude }}{% endif %}
+  </div>
+
+  {% for section in sections %}
+    <h2>{{ section.heading }}</h2>
+    <table>
+      {% for row in section.rows %}
+        <tr>
+          <td class="label">{{ row.label }}</td>
+          <td class="conf-{{ row.confidence }}">
+            {{ row.value|default:"—" }}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endfor %}
+</body>
+</html>

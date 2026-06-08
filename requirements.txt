@@ -1,0 +1,32 @@
+# --- Core framework ---
+Django==5.1.4
+djangorestframework==3.15.2
+djangorestframework-simplejwt==5.3.1
+drf-spectacular==0.28.0
+django-cors-headers==4.6.0
+django-filter==24.3
+
+# --- Database / config ---
+dj-database-url==2.3.0
+psycopg[binary]==3.2.3
+python-dotenv==1.0.1
+
+# --- Storage (AWS S3) ---
+django-storages==1.14.4
+boto3==1.35.76
+
+# --- AI providers ---
+openai==1.57.4
+httpx==0.28.1
+
+# --- Reports (PDF) ---
+weasyprint==63.1
+reportlab==4.2.5
+
+# --- Server ---
+gunicorn==23.0.0
+whitenoise==6.8.2
+
+# --- Dev / test ---
+pytest==8.3.4
+pytest-django==4.9.0

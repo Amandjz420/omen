@@ -1,0 +1,8 @@
+# Railway/Nixpacks build config.
+# We only add the native libraries WeasyPrint needs to render PDFs; Nixpacks
+# auto-detects Python (3.12 via .python-version / runtime.txt), creates the
+# venv, installs requirements.txt, and runs the start command from railway.json.
+# (If these libs are ever unavailable, report generation falls back to reportlab.)
+
+[phases.setup]
+nixPkgs = ["...", "pango", "cairo", "gdk-pixbuf", "libffi", "fontconfig", "harfbuzz"]
