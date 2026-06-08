@@ -150,8 +150,18 @@ categories; those rows carry the bank in both `detail_category` and `bank_scope`
   `DATABASE_URL=${{Postgres.DATABASE_URL}}` on the web/worker services. The code
   already reads `DATABASE_URL` (SQLite is only the local fallback); `psycopg` is
   in `requirements.txt`. Migrations run via the release/preDeploy command.
-- **Web** `gunicorn omen.wsgi`; **Worker** `run_ai_worker --loop` (or a Railway
-  cron running `--once --batch 5`). The job queue is DB-backed (no Celery/Redis).
+- **Two services, config-as-code** (Railway config is per-service; each service
+  points at its own config file):
+  - **Web** → `railway.json`: `gunicorn omen.wsgi`, pre-deploy `manage.py release`
+    (migrate + collectstatic + seed), healthcheck `/healthz`.
+  - **Worker** → `railway.worker.json`: `run_ai_worker --loop --interval 3`, no
+    pre-deploy (web owns migrate/seed), no healthcheck, `ON_FAILURE` restarts.
+    In the dashboard create a second service from the same repo and set its
+    **Config File path** to `railway.worker.json`. Set `DATABASE_URL` (and AI
+    keys, `PUBLIC_BASE_URL`) on it too. Without a worker, AI jobs stay `queued`.
+  - **Cron alternative**: instead of the loop worker, set a service's schedule
+    and run `python manage.py run_ai_worker --once --batch 5`.
+  The job queue is DB-backed (no Celery/Redis).
 - **Release** runs `python manage.py release` (pre-deploy + Procfile): migrate +
   collectstatic + `seed_demo` (auto-seed; set `SEED_ON_RELEASE=0` to disable).
 - **Config from code** (no dashboard vars needed): `DJANGO_SETTINGS_MODULE`
